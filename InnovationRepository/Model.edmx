@@ -1,0 +1,2725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="ID address" />
+          </Key>
+          <Property Name="ID address" Type="int" Nullable="false" />
+          <Property Name="ID district" Type="int" Nullable="false" />
+          <Property Name="ID town" Type="int" Nullable="false" />
+          <Property Name="street" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="house" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="flat" Type="int" />
+        </EntityType>
+        <EntityType Name="appArea">
+          <Key>
+            <PropertyRef Name="ID appArea" />
+          </Key>
+          <Property Name="ID appArea" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="balanceInf">
+          <Key>
+            <PropertyRef Name="ID balance" />
+          </Key>
+          <Property Name="ID company" Type="int" Nullable="false" />
+          <Property Name="ID balance" Type="int" Nullable="false" />
+          <Property Name="activ" Type="money" Nullable="false" />
+          <Property Name="passiv" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="ID branch" />
+          </Key>
+          <Property Name="ID branch" Type="int" Nullable="false" />
+          <Property Name="branch" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="causeOf">
+          <Key>
+            <PropertyRef Name="ID causeOf" />
+          </Key>
+          <Property Name="ID causeOf" Type="int" Nullable="false" />
+          <Property Name="description" Type="text" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="chaMeetNeedsOf">
+          <Key>
+            <PropertyRef Name="ID chaMeetNeedsOf" />
+          </Key>
+          <Property Name="ID chaMeetNeedsOf" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="Classification">
+          <Key>
+            <PropertyRef Name="ID classification" />
+          </Key>
+          <Property Name="ID classification" Type="int" Nullable="false" />
+          <Property Name="ID prevelency" Type="int" Nullable="false" />
+          <Property Name="ID placeProdCycle" Type="int" Nullable="false" />
+          <Property Name="ID continuity" Type="int" Nullable="false" />
+          <Property Name="ID expMarShare" Type="int" Nullable="false" />
+          <Property Name="ID degreeNovelPot" Type="int" Nullable="false" />
+          <Property Name="ID degreeNovelMark" Type="int" Nullable="false" />
+          <Property Name="ID imactToEconomy" Type="int" Nullable="false" />
+          <Property Name="ID impactProdProc" Type="int" Nullable="false" />
+          <Property Name="ID impactFactProd" Type="int" Nullable="false" />
+          <Property Name="ID appArea" Type="int" Nullable="false" />
+          <Property Name="ID causeOf" Type="int" Nullable="false" />
+          <Property Name="ID chaMeetNeedsOf" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID company" />
+          </Key>
+          <Property Name="name" Type="ntext" Nullable="false" />
+          <Property Name="ID adress" Type="int" Nullable="false" />
+          <Property Name="ID contact" Type="int" Nullable="false" />
+          <Property Name="ID company" Type="int" Nullable="false" />
+          <Property Name="ID worksheet" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyState">
+          <Key>
+            <PropertyRef Name="ID companyState" />
+          </Key>
+          <Property Name="ID companyState" Type="int" Nullable="false" />
+          <Property Name="companyState" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="contacts">
+          <Key>
+            <PropertyRef Name="ID contact" />
+          </Key>
+          <Property Name="ID contact" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="surname" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="secondName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="telephone" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="ID address" Type="int" />
+          <Property Name="ID CompanyState" Type="int" />
+          <Property Name="ID PersonStatus" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="continuity">
+          <Key>
+            <PropertyRef Name="ID continuity" />
+          </Key>
+          <Property Name="ID continuity" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="degreeNovelMark">
+          <Key>
+            <PropertyRef Name="ID degreeNovelMark" />
+          </Key>
+          <Property Name="ID degreeNovelMark" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="degreeNovelPot">
+          <Key>
+            <PropertyRef Name="ID degreeNovelPot" />
+          </Key>
+          <Property Name="ID degreeNovelPot" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="districts">
+          <Key>
+            <PropertyRef Name="ID district" />
+          </Key>
+          <Property Name="ID district" Type="int" Nullable="false" />
+          <Property Name="district" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="expMarShare">
+          <Key>
+            <PropertyRef Name="ID expMarShare" />
+          </Key>
+          <Property Name="ID expMarShare" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="FieldActivity">
+          <Key>
+            <PropertyRef Name="ID fieldActivity" />
+          </Key>
+          <Property Name="ID fieldActivity" Type="int" Nullable="false" />
+          <Property Name="fieldActivity" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imactToEconomy">
+          <Key>
+            <PropertyRef Name="ID imactToEconomy" />
+          </Key>
+          <Property Name="ID imactToEconomy" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="impactFactProd">
+          <Key>
+            <PropertyRef Name="ID impactFactProd" />
+          </Key>
+          <Property Name="ID impactFactProd" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="impactProdProc">
+          <Key>
+            <PropertyRef Name="ID impactProdProc" />
+          </Key>
+          <Property Name="ID impactProdProc" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="IndividualOrEntry">
+          <Key>
+            <PropertyRef Name="ID IndOrEntr" />
+          </Key>
+          <Property Name="ID IndOrEntr" Type="int" Nullable="false" />
+          <Property Name="Person" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Innovation">
+          <Key>
+            <PropertyRef Name="ID innovation" />
+          </Key>
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="ID innovation" Type="int" Nullable="false" />
+          <Property Name="ID innovWorksheet" Type="int" Nullable="false" />
+          <Property Name="ID contactAuthor" Type="int" Nullable="false" />
+          <Property Name="ID contactOwner" Type="int" Nullable="false" />
+          <Property Name="ID sertificate" Type="int" />
+          <Property Name="ID stateInnov" Type="int" />
+          <Property Name="effeciency" Type="varchar" MaxLength="50" />
+          <Property Name="registrationDate" Type="datetime" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="lastUpdate" Type="datetime" />
+          <Property Name="ID classification" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="innovationWorksheet">
+          <Key>
+            <PropertyRef Name="ID innowWorksheet" />
+          </Key>
+          <Property Name="ID innowWorksheet" Type="int" Nullable="false" />
+          <Property Name="ID fieldActivity" Type="int" />
+          <Property Name="ID branch" Type="int" />
+          <Property Name="ware" Type="text" />
+        </EntityType>
+        <EntityType Name="License">
+          <Key>
+            <PropertyRef Name="ID license" />
+          </Key>
+          <Property Name="ID license" Type="int" Nullable="false" />
+          <Property Name="numberLic" Type="int" Nullable="false" />
+          <Property Name="dateIssue" Type="date" Nullable="false" />
+          <Property Name="licDescription" Type="text" />
+          <Property Name="ID licenseCompany" Type="int" />
+          <Property Name="ID company" Type="int" />
+        </EntityType>
+        <EntityType Name="LicenseCompany">
+          <Key>
+            <PropertyRef Name="ID licenseCompany" />
+          </Key>
+          <Property Name="ID licenseCompany" Type="int" Nullable="false" />
+          <Property Name="licenseCompany" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ownersheep">
+          <Key>
+            <PropertyRef Name="ID ownersheep" />
+          </Key>
+          <Property Name="ID ownersheep" Type="int" Nullable="false" />
+          <Property Name="ownersheep" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PersonPost">
+          <Key>
+            <PropertyRef Name="ID PersonPost" />
+          </Key>
+          <Property Name="ID PersonPost" Type="int" Nullable="false" />
+          <Property Name="postName" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PersonStatus">
+          <Key>
+            <PropertyRef Name="ID PersonStatus" />
+          </Key>
+          <Property Name="ID PersonStatus" Type="int" Nullable="false" />
+          <Property Name="ID PersonPost" Type="int" />
+          <Property Name="ID IndividualOrEntry" Type="int" />
+        </EntityType>
+        <EntityType Name="placeProdCycle">
+          <Key>
+            <PropertyRef Name="ID placeProdCycle" />
+          </Key>
+          <Property Name="ID placeProdCycle" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="Prevelency">
+          <Key>
+            <PropertyRef Name="ID prevelency" />
+          </Key>
+          <Property Name="ID prevelency" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="realization">
+          <Key>
+            <PropertyRef Name="ID realization" />
+          </Key>
+          <Property Name="ID realization" Type="int" Nullable="false" />
+          <Property Name="ID innovation" Type="int" Nullable="false" />
+          <Property Name="ID company" Type="int" Nullable="false" />
+          <Property Name="ID promoter" Type="int" Nullable="false" />
+          <Property Name="implementationState" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sertification">
+          <Key>
+            <PropertyRef Name="ID sertificate" />
+          </Key>
+          <Property Name="ID sertificate" Type="int" Nullable="false" />
+          <Property Name="dateIssue" Type="date" Nullable="false" />
+          <Property Name="descriptioon" Type="text" />
+          <Property Name="ID License" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StatesInnovation">
+          <Key>
+            <PropertyRef Name="ID stateInnov" />
+          </Key>
+          <Property Name="ID stateInnov" Type="int" Nullable="false" />
+          <Property Name="stateInnvoation" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="towns">
+          <Key>
+            <PropertyRef Name="ID town" />
+          </Key>
+          <Property Name="ID town" Type="int" Nullable="false" />
+          <Property Name="town" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="worksheet">
+          <Key>
+            <PropertyRef Name="ID worksheet" />
+          </Key>
+          <Property Name="ID worksheet" Type="int" Nullable="false" />
+          <Property Name="ID fieldActivity" Type="int" Nullable="false" />
+          <Property Name="ID branch" Type="int" Nullable="false" />
+          <Property Name="ID ownership" Type="int" Nullable="false" />
+          <Property Name="ware" Type="text" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutAuthors' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="InformationAboutAuthors">
+          <Key>
+            <PropertyRef Name="Имя" />
+            <PropertyRef Name="Фамилия" />
+            <PropertyRef Name="Индивидуальный статус" />
+            <PropertyRef Name="Должность" />
+            <PropertyRef Name="Область" />
+            <PropertyRef Name="Город" />
+            <PropertyRef Name="Улица" />
+            <PropertyRef Name="Дом" />
+          </Key>
+          <Property Name="Имя" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Фамилия" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Количество проектов" Type="int" />
+          <Property Name="Индивидуальный статус" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Должность" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="Область" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Город" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Улица" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Дом" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Квартира" Type="int" />
+          <Property Name="Телефон" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutCompanies' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="InformationAboutCompanies">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="branch" />
+            <PropertyRef Name="fieldActivity" />
+            <PropertyRef Name="ware" />
+            <PropertyRef Name="ownersheep" />
+          </Key>
+          <Property Name="name" Type="ntext" Nullable="false" />
+          <Property Name="branch" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fieldActivity" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ware" Type="text" Nullable="false" />
+          <Property Name="ownersheep" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="InformationAboutRealization">
+          <Key>
+            <PropertyRef Name="Name of Innovation Product" />
+            <PropertyRef Name="Name of Company" />
+            <PropertyRef Name="Surname Promouter" />
+          </Key>
+          <Property Name="Name of Innovation Product" Type="varchar(max)" Nullable="false" />
+          <Property Name="Name of Company" Type="ntext" Nullable="false" />
+          <Property Name="implementationState" Type="varchar" MaxLength="50" />
+          <Property Name="Surname Promouter" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Address_districts">
+          <End Role="districts" Type="Self.districts" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="districts">
+              <PropertyRef Name="ID district" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="ID district" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Address_towns">
+          <End Role="towns" Type="Self.towns" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="towns">
+              <PropertyRef Name="ID town" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="ID town" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_balanceInf_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="balanceInf" Type="Self.balanceInf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID company" />
+            </Principal>
+            <Dependent Role="balanceInf">
+              <PropertyRef Name="ID company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_appArea">
+          <End Role="appArea" Type="Self.appArea" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="appArea">
+              <PropertyRef Name="ID appArea" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID appArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_causeOf">
+          <End Role="causeOf" Type="Self.causeOf" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="causeOf">
+              <PropertyRef Name="ID causeOf" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID causeOf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_chaMeetNeedsOf">
+          <End Role="chaMeetNeedsOf" Type="Self.chaMeetNeedsOf" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chaMeetNeedsOf">
+              <PropertyRef Name="ID chaMeetNeedsOf" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID chaMeetNeedsOf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_continuity">
+          <End Role="continuity" Type="Self.continuity" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="continuity">
+              <PropertyRef Name="ID continuity" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID continuity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_degreeNovelMark">
+          <End Role="degreeNovelMark" Type="Self.degreeNovelMark" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degreeNovelMark">
+              <PropertyRef Name="ID degreeNovelMark" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID degreeNovelMark" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_degreeNovelPot">
+          <End Role="degreeNovelPot" Type="Self.degreeNovelPot" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degreeNovelPot">
+              <PropertyRef Name="ID degreeNovelPot" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID degreeNovelPot" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_expMarShare">
+          <End Role="expMarShare" Type="Self.expMarShare" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="expMarShare">
+              <PropertyRef Name="ID expMarShare" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID expMarShare" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_imactToEconomy">
+          <End Role="imactToEconomy" Type="Self.imactToEconomy" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imactToEconomy">
+              <PropertyRef Name="ID imactToEconomy" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID imactToEconomy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_impactFactProd">
+          <End Role="impactFactProd" Type="Self.impactFactProd" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="impactFactProd">
+              <PropertyRef Name="ID impactFactProd" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID impactFactProd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_impactProdProc">
+          <End Role="impactProdProc" Type="Self.impactProdProc" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="impactProdProc">
+              <PropertyRef Name="ID impactProdProc" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID impactProdProc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_placeProdCycle">
+          <End Role="placeProdCycle" Type="Self.placeProdCycle" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="placeProdCycle">
+              <PropertyRef Name="ID placeProdCycle" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID placeProdCycle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_Prevelency">
+          <End Role="Prevelency" Type="Self.Prevelency" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prevelency">
+              <PropertyRef Name="ID prevelency" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID prevelency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_contacts1">
+          <End Role="contacts" Type="Self.contacts" Multiplicity="1" />
+          <End Role="Company" Type="Self.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID contact" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="ID contact" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_worksheet">
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="1" />
+          <End Role="Company" Type="Self.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="worksheet">
+              <PropertyRef Name="ID worksheet" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="ID worksheet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_contacts_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
+          <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="ID address" />
+            </Principal>
+            <Dependent Role="contacts">
+              <PropertyRef Name="ID address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_contacts_CompanyState">
+          <End Role="CompanyState" Type="Self.CompanyState" Multiplicity="0..1" />
+          <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyState">
+              <PropertyRef Name="ID companyState" />
+            </Principal>
+            <Dependent Role="contacts">
+              <PropertyRef Name="ID CompanyState" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_contacts_PersonStatus">
+          <End Role="PersonStatus" Type="Self.PersonStatus" Multiplicity="1" />
+          <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonStatus">
+              <PropertyRef Name="ID PersonStatus" />
+            </Principal>
+            <Dependent Role="contacts">
+              <PropertyRef Name="ID PersonStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_Classification">
+          <End Role="Classification" Type="Self.Classification" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classification">
+              <PropertyRef Name="ID classification" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID classification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_contacts">
+          <End Role="contacts" Type="Self.contacts" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID contact" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID contactAuthor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_contacts1">
+          <End Role="contacts" Type="Self.contacts" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID contact" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID contactOwner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_innovationWorksheet">
+          <End Role="innovationWorksheet" Type="Self.innovationWorksheet" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="innovationWorksheet">
+              <PropertyRef Name="ID innowWorksheet" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID innovWorksheet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_Sertification">
+          <End Role="Sertification" Type="Self.Sertification" Multiplicity="0..1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sertification">
+              <PropertyRef Name="ID sertificate" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID sertificate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_StatesInnovation">
+          <End Role="StatesInnovation" Type="Self.StatesInnovation" Multiplicity="0..1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatesInnovation">
+              <PropertyRef Name="ID stateInnov" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID stateInnov" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_innovationWorksheet_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="0..1" />
+          <End Role="innovationWorksheet" Type="Self.innovationWorksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="ID branch" />
+            </Principal>
+            <Dependent Role="innovationWorksheet">
+              <PropertyRef Name="ID branch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_innovationWorksheet_FieldActivity">
+          <End Role="FieldActivity" Type="Self.FieldActivity" Multiplicity="0..1" />
+          <End Role="innovationWorksheet" Type="Self.innovationWorksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldActivity">
+              <PropertyRef Name="ID fieldActivity" />
+            </Principal>
+            <Dependent Role="innovationWorksheet">
+              <PropertyRef Name="ID fieldActivity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_License_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="License" Type="Self.License" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID company" />
+            </Principal>
+            <Dependent Role="License">
+              <PropertyRef Name="ID company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_License_LicenseCompany">
+          <End Role="LicenseCompany" Type="Self.LicenseCompany" Multiplicity="0..1" />
+          <End Role="License" Type="Self.License" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LicenseCompany">
+              <PropertyRef Name="ID licenseCompany" />
+            </Principal>
+            <Dependent Role="License">
+              <PropertyRef Name="ID licenseCompany" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonStatus_IndividualOrEntry">
+          <End Role="IndividualOrEntry" Type="Self.IndividualOrEntry" Multiplicity="0..1" />
+          <End Role="PersonStatus" Type="Self.PersonStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IndividualOrEntry">
+              <PropertyRef Name="ID IndOrEntr" />
+            </Principal>
+            <Dependent Role="PersonStatus">
+              <PropertyRef Name="ID IndividualOrEntry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonStatus_PersonPost">
+          <End Role="PersonPost" Type="Self.PersonPost" Multiplicity="0..1" />
+          <End Role="PersonStatus" Type="Self.PersonStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonPost">
+              <PropertyRef Name="ID PersonPost" />
+            </Principal>
+            <Dependent Role="PersonStatus">
+              <PropertyRef Name="ID PersonPost" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_realization_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="realization" Type="Self.realization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID company" />
+            </Principal>
+            <Dependent Role="realization">
+              <PropertyRef Name="ID company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_realization_contacts">
+          <End Role="contacts" Type="Self.contacts" Multiplicity="1" />
+          <End Role="realization" Type="Self.realization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID contact" />
+            </Principal>
+            <Dependent Role="realization">
+              <PropertyRef Name="ID promoter" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_realization_Innovation">
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="1" />
+          <End Role="realization" Type="Self.realization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Innovation">
+              <PropertyRef Name="ID innovation" />
+            </Principal>
+            <Dependent Role="realization">
+              <PropertyRef Name="ID innovation" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sertification_License">
+          <End Role="License" Type="Self.License" Multiplicity="1" />
+          <End Role="Sertification" Type="Self.Sertification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="License">
+              <PropertyRef Name="ID license" />
+            </Principal>
+            <Dependent Role="Sertification">
+              <PropertyRef Name="ID License" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_worksheet_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="ID branch" />
+            </Principal>
+            <Dependent Role="worksheet">
+              <PropertyRef Name="ID branch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_worksheet_FieldActivity">
+          <End Role="FieldActivity" Type="Self.FieldActivity" Multiplicity="1" />
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldActivity">
+              <PropertyRef Name="ID fieldActivity" />
+            </Principal>
+            <Dependent Role="worksheet">
+              <PropertyRef Name="ID fieldActivity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_worksheet_Ownersheep">
+          <End Role="Ownersheep" Type="Self.Ownersheep" Multiplicity="1" />
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ownersheep">
+              <PropertyRef Name="ID ownersheep" />
+            </Principal>
+            <Dependent Role="worksheet">
+              <PropertyRef Name="ID ownership" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="InnovationAfterDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="date" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="realizationInCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="param" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="appArea" EntityType="Self.appArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="balanceInf" EntityType="Self.balanceInf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="causeOf" EntityType="Self.causeOf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chaMeetNeedsOf" EntityType="Self.chaMeetNeedsOf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Classification" EntityType="Self.Classification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyState" EntityType="Self.CompanyState" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="contacts" EntityType="Self.contacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="continuity" EntityType="Self.continuity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="degreeNovelMark" EntityType="Self.degreeNovelMark" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="degreeNovelPot" EntityType="Self.degreeNovelPot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="districts" EntityType="Self.districts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="expMarShare" EntityType="Self.expMarShare" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FieldActivity" EntityType="Self.FieldActivity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="imactToEconomy" EntityType="Self.imactToEconomy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="impactFactProd" EntityType="Self.impactFactProd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="impactProdProc" EntityType="Self.impactProdProc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IndividualOrEntry" EntityType="Self.IndividualOrEntry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Innovation" EntityType="Self.Innovation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="innovationWorksheet" EntityType="Self.innovationWorksheet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="License" EntityType="Self.License" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LicenseCompany" EntityType="Self.LicenseCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ownersheep" EntityType="Self.Ownersheep" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonPost" EntityType="Self.PersonPost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonStatus" EntityType="Self.PersonStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="placeProdCycle" EntityType="Self.placeProdCycle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prevelency" EntityType="Self.Prevelency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="realization" EntityType="Self.realization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sertification" EntityType="Self.Sertification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StatesInnovation" EntityType="Self.StatesInnovation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="towns" EntityType="Self.towns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="worksheet" EntityType="Self.worksheet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InformationAboutAuthors" EntityType="Self.InformationAboutAuthors" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [InformationAboutAuthors].[Имя] AS [Имя], 
+    [InformationAboutAuthors].[Фамилия] AS [Фамилия], 
+    [InformationAboutAuthors].[Количество проектов] AS [Количество проектов], 
+    [InformationAboutAuthors].[Индивидуальный статус] AS [Индивидуальный статус], 
+    [InformationAboutAuthors].[Должность] AS [Должность], 
+    [InformationAboutAuthors].[email] AS [email], 
+    [InformationAboutAuthors].[Область] AS [Область], 
+    [InformationAboutAuthors].[Город] AS [Город], 
+    [InformationAboutAuthors].[Улица] AS [Улица], 
+    [InformationAboutAuthors].[Дом] AS [Дом], 
+    [InformationAboutAuthors].[Квартира] AS [Квартира], 
+    [InformationAboutAuthors].[Телефон] AS [Телефон]
+    FROM [dbo].[InformationAboutAuthors] AS [InformationAboutAuthors]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="InformationAboutCompanies" EntityType="Self.InformationAboutCompanies" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [InformationAboutCompanies].[name] AS [name], 
+    [InformationAboutCompanies].[branch] AS [branch], 
+    [InformationAboutCompanies].[fieldActivity] AS [fieldActivity], 
+    [InformationAboutCompanies].[ware] AS [ware], 
+    [InformationAboutCompanies].[ownersheep] AS [ownersheep]
+    FROM [dbo].[InformationAboutCompanies] AS [InformationAboutCompanies]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="InformationAboutRealization" EntityType="Self.InformationAboutRealization" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [InformationAboutRealization].[Name of Innovation Product] AS [Name of Innovation Product], 
+    [InformationAboutRealization].[Name of Company] AS [Name of Company], 
+    [InformationAboutRealization].[implementationState] AS [implementationState], 
+    [InformationAboutRealization].[Surname Promouter] AS [Surname Promouter]
+    FROM [dbo].[InformationAboutRealization] AS [InformationAboutRealization]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Address_districts" Association="Self.FK_Address_districts">
+            <End Role="districts" EntitySet="districts" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Address_towns" Association="Self.FK_Address_towns">
+            <End Role="towns" EntitySet="towns" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK_balanceInf_Company" Association="Self.FK_balanceInf_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="balanceInf" EntitySet="balanceInf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_appArea" Association="Self.FK_Classification_appArea">
+            <End Role="appArea" EntitySet="appArea" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_causeOf" Association="Self.FK_Classification_causeOf">
+            <End Role="causeOf" EntitySet="causeOf" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_chaMeetNeedsOf" Association="Self.FK_Classification_chaMeetNeedsOf">
+            <End Role="chaMeetNeedsOf" EntitySet="chaMeetNeedsOf" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_continuity" Association="Self.FK_Classification_continuity">
+            <End Role="continuity" EntitySet="continuity" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_degreeNovelMark" Association="Self.FK_Classification_degreeNovelMark">
+            <End Role="degreeNovelMark" EntitySet="degreeNovelMark" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_degreeNovelPot" Association="Self.FK_Classification_degreeNovelPot">
+            <End Role="degreeNovelPot" EntitySet="degreeNovelPot" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_expMarShare" Association="Self.FK_Classification_expMarShare">
+            <End Role="expMarShare" EntitySet="expMarShare" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_imactToEconomy" Association="Self.FK_Classification_imactToEconomy">
+            <End Role="imactToEconomy" EntitySet="imactToEconomy" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_impactFactProd" Association="Self.FK_Classification_impactFactProd">
+            <End Role="impactFactProd" EntitySet="impactFactProd" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_impactProdProc" Association="Self.FK_Classification_impactProdProc">
+            <End Role="impactProdProc" EntitySet="impactProdProc" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_placeProdCycle" Association="Self.FK_Classification_placeProdCycle">
+            <End Role="placeProdCycle" EntitySet="placeProdCycle" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_Prevelency" Association="Self.FK_Classification_Prevelency">
+            <End Role="Prevelency" EntitySet="Prevelency" />
+            <End Role="Classification" EntitySet="Classification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_contacts1" Association="Self.FK_Company_contacts1">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_worksheet" Association="Self.FK_Company_worksheet">
+            <End Role="worksheet" EntitySet="worksheet" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_contacts_Address" Association="Self.FK_contacts_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="contacts" EntitySet="contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_contacts_CompanyState" Association="Self.FK_contacts_CompanyState">
+            <End Role="CompanyState" EntitySet="CompanyState" />
+            <End Role="contacts" EntitySet="contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_contacts_PersonStatus" Association="Self.FK_contacts_PersonStatus">
+            <End Role="PersonStatus" EntitySet="PersonStatus" />
+            <End Role="contacts" EntitySet="contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_Classification" Association="Self.FK_Innovation_Classification">
+            <End Role="Classification" EntitySet="Classification" />
+            <End Role="Innovation" EntitySet="Innovation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_contacts" Association="Self.FK_Innovation_contacts">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="Innovation" EntitySet="Innovation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_contacts1" Association="Self.FK_Innovation_contacts1">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="Innovation" EntitySet="Innovation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_innovationWorksheet" Association="Self.FK_Innovation_innovationWorksheet">
+            <End Role="innovationWorksheet" EntitySet="innovationWorksheet" />
+            <End Role="Innovation" EntitySet="Innovation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_Sertification" Association="Self.FK_Innovation_Sertification">
+            <End Role="Sertification" EntitySet="Sertification" />
+            <End Role="Innovation" EntitySet="Innovation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_StatesInnovation" Association="Self.FK_Innovation_StatesInnovation">
+            <End Role="StatesInnovation" EntitySet="StatesInnovation" />
+            <End Role="Innovation" EntitySet="Innovation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_innovationWorksheet_Branch" Association="Self.FK_innovationWorksheet_Branch">
+            <End Role="Branch" EntitySet="Branch" />
+            <End Role="innovationWorksheet" EntitySet="innovationWorksheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_innovationWorksheet_FieldActivity" Association="Self.FK_innovationWorksheet_FieldActivity">
+            <End Role="FieldActivity" EntitySet="FieldActivity" />
+            <End Role="innovationWorksheet" EntitySet="innovationWorksheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_License_Company" Association="Self.FK_License_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="License" EntitySet="License" />
+          </AssociationSet>
+          <AssociationSet Name="FK_License_LicenseCompany" Association="Self.FK_License_LicenseCompany">
+            <End Role="LicenseCompany" EntitySet="LicenseCompany" />
+            <End Role="License" EntitySet="License" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonStatus_IndividualOrEntry" Association="Self.FK_PersonStatus_IndividualOrEntry">
+            <End Role="IndividualOrEntry" EntitySet="IndividualOrEntry" />
+            <End Role="PersonStatus" EntitySet="PersonStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonStatus_PersonPost" Association="Self.FK_PersonStatus_PersonPost">
+            <End Role="PersonPost" EntitySet="PersonPost" />
+            <End Role="PersonStatus" EntitySet="PersonStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_realization_Company" Association="Self.FK_realization_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="realization" EntitySet="realization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_realization_contacts" Association="Self.FK_realization_contacts">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="realization" EntitySet="realization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_realization_Innovation" Association="Self.FK_realization_Innovation">
+            <End Role="Innovation" EntitySet="Innovation" />
+            <End Role="realization" EntitySet="realization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sertification_License" Association="Self.FK_Sertification_License">
+            <End Role="License" EntitySet="License" />
+            <End Role="Sertification" EntitySet="Sertification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_worksheet_Branch" Association="Self.FK_worksheet_Branch">
+            <End Role="Branch" EntitySet="Branch" />
+            <End Role="worksheet" EntitySet="worksheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_worksheet_FieldActivity" Association="Self.FK_worksheet_FieldActivity">
+            <End Role="FieldActivity" EntitySet="FieldActivity" />
+            <End Role="worksheet" EntitySet="worksheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_worksheet_Ownersheep" Association="Self.FK_worksheet_Ownersheep">
+            <End Role="Ownersheep" EntitySet="Ownersheep" />
+            <End Role="worksheet" EntitySet="worksheet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="ID_address" />
+          </Key>
+          <Property Name="ID_address" Type="Int32" Nullable="false" />
+          <Property Name="ID_district" Type="Int32" Nullable="false" />
+          <Property Name="ID_town" Type="Int32" Nullable="false" />
+          <Property Name="street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="house" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="flat" Type="Int32" />
+          <NavigationProperty Name="district" Relationship="Self.FK_Address_districts" FromRole="Address" ToRole="districts" />
+          <NavigationProperty Name="town" Relationship="Self.FK_Address_towns" FromRole="Address" ToRole="towns" />
+          <NavigationProperty Name="contacts" Relationship="Self.FK_contacts_Address" FromRole="Address" ToRole="contacts" />
+        </EntityType>
+        <EntityType Name="appArea">
+          <Key>
+            <PropertyRef Name="ID_appArea" />
+          </Key>
+          <Property Name="ID_appArea" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_appArea" FromRole="appArea" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="balanceInf">
+          <Key>
+            <PropertyRef Name="ID_balance" />
+          </Key>
+          <Property Name="ID_company" Type="Int32" Nullable="false" />
+          <Property Name="ID_balance" Type="Int32" Nullable="false" />
+          <Property Name="activ" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="passiv" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="Self.FK_balanceInf_Company" FromRole="balanceInf" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="ID_branch" />
+          </Key>
+          <Property Name="ID_branch" Type="Int32" Nullable="false" />
+          <Property Name="branch1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="innovationWorksheets" Relationship="Self.FK_innovationWorksheet_Branch" FromRole="Branch" ToRole="innovationWorksheet" />
+          <NavigationProperty Name="worksheets" Relationship="Self.FK_worksheet_Branch" FromRole="Branch" ToRole="worksheet" />
+        </EntityType>
+        <EntityType Name="causeOf">
+          <Key>
+            <PropertyRef Name="ID_causeOf" />
+          </Key>
+          <Property Name="ID_causeOf" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_causeOf" FromRole="causeOf" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="chaMeetNeedsOf">
+          <Key>
+            <PropertyRef Name="ID_chaMeetNeedsOf" />
+          </Key>
+          <Property Name="ID_chaMeetNeedsOf" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_chaMeetNeedsOf" FromRole="chaMeetNeedsOf" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="Classification">
+          <Key>
+            <PropertyRef Name="ID_classification" />
+          </Key>
+          <Property Name="ID_classification" Type="Int32" Nullable="false" />
+          <Property Name="ID_prevelency" Type="Int32" Nullable="false" />
+          <Property Name="ID_placeProdCycle" Type="Int32" Nullable="false" />
+          <Property Name="ID_continuity" Type="Int32" Nullable="false" />
+          <Property Name="ID_expMarShare" Type="Int32" Nullable="false" />
+          <Property Name="ID_degreeNovelPot" Type="Int32" Nullable="false" />
+          <Property Name="ID_degreeNovelMark" Type="Int32" Nullable="false" />
+          <Property Name="ID_imactToEconomy" Type="Int32" Nullable="false" />
+          <Property Name="ID_impactProdProc" Type="Int32" Nullable="false" />
+          <Property Name="ID_impactFactProd" Type="Int32" Nullable="false" />
+          <Property Name="ID_appArea" Type="Int32" Nullable="false" />
+          <Property Name="ID_causeOf" Type="Int32" Nullable="false" />
+          <Property Name="ID_chaMeetNeedsOf" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="appArea" Relationship="Self.FK_Classification_appArea" FromRole="Classification" ToRole="appArea" />
+          <NavigationProperty Name="causeOf" Relationship="Self.FK_Classification_causeOf" FromRole="Classification" ToRole="causeOf" />
+          <NavigationProperty Name="chaMeetNeedsOf" Relationship="Self.FK_Classification_chaMeetNeedsOf" FromRole="Classification" ToRole="chaMeetNeedsOf" />
+          <NavigationProperty Name="continuity" Relationship="Self.FK_Classification_continuity" FromRole="Classification" ToRole="continuity" />
+          <NavigationProperty Name="degreeNovelMark" Relationship="Self.FK_Classification_degreeNovelMark" FromRole="Classification" ToRole="degreeNovelMark" />
+          <NavigationProperty Name="degreeNovelPot" Relationship="Self.FK_Classification_degreeNovelPot" FromRole="Classification" ToRole="degreeNovelPot" />
+          <NavigationProperty Name="expMarShare" Relationship="Self.FK_Classification_expMarShare" FromRole="Classification" ToRole="expMarShare" />
+          <NavigationProperty Name="imactToEconomy" Relationship="Self.FK_Classification_imactToEconomy" FromRole="Classification" ToRole="imactToEconomy" />
+          <NavigationProperty Name="impactFactProd" Relationship="Self.FK_Classification_impactFactProd" FromRole="Classification" ToRole="impactFactProd" />
+          <NavigationProperty Name="impactProdProc" Relationship="Self.FK_Classification_impactProdProc" FromRole="Classification" ToRole="impactProdProc" />
+          <NavigationProperty Name="placeProdCycle" Relationship="Self.FK_Classification_placeProdCycle" FromRole="Classification" ToRole="placeProdCycle" />
+          <NavigationProperty Name="Prevelency" Relationship="Self.FK_Classification_Prevelency" FromRole="Classification" ToRole="Prevelency" />
+          <NavigationProperty Name="Innovations" Relationship="Self.FK_Innovation_Classification" FromRole="Classification" ToRole="Innovation" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID_company" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_adress" Type="Int32" Nullable="false" />
+          <Property Name="ID_contact" Type="Int32" Nullable="false" />
+          <Property Name="ID_company" Type="Int32" Nullable="false" />
+          <Property Name="ID_worksheet" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="balanceInfs" Relationship="Self.FK_balanceInf_Company" FromRole="Company" ToRole="balanceInf" />
+          <NavigationProperty Name="contact" Relationship="Self.FK_Company_contacts1" FromRole="Company" ToRole="contacts" />
+          <NavigationProperty Name="worksheet" Relationship="Self.FK_Company_worksheet" FromRole="Company" ToRole="worksheet" />
+          <NavigationProperty Name="Licenses" Relationship="Self.FK_License_Company" FromRole="Company" ToRole="License" />
+          <NavigationProperty Name="realizations" Relationship="Self.FK_realization_Company" FromRole="Company" ToRole="realization" />
+        </EntityType>
+        <EntityType Name="CompanyState">
+          <Key>
+            <PropertyRef Name="ID_companyState" />
+          </Key>
+          <Property Name="ID_companyState" Type="Int32" Nullable="false" />
+          <Property Name="companyState1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="contacts" Relationship="Self.FK_contacts_CompanyState" FromRole="CompanyState" ToRole="contacts" />
+        </EntityType>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="ID_contact" />
+          </Key>
+          <Property Name="ID_contact" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="surname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="secondName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ID_address" Type="Int32" />
+          <Property Name="ID_CompanyState" Type="Int32" />
+          <Property Name="ID_PersonStatus" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Address" Relationship="Self.FK_contacts_Address" FromRole="contacts" ToRole="Address" />
+          <NavigationProperty Name="Companies" Relationship="Self.FK_Company_contacts1" FromRole="contacts" ToRole="Company" />
+          <NavigationProperty Name="CompanyState" Relationship="Self.FK_contacts_CompanyState" FromRole="contacts" ToRole="CompanyState" />
+          <NavigationProperty Name="PersonStatu" Relationship="Self.FK_contacts_PersonStatus" FromRole="contacts" ToRole="PersonStatus" />
+          <NavigationProperty Name="Innovations" Relationship="Self.FK_Innovation_contacts" FromRole="contacts" ToRole="Innovation" />
+          <NavigationProperty Name="Innovations1" Relationship="Self.FK_Innovation_contacts1" FromRole="contacts" ToRole="Innovation" />
+          <NavigationProperty Name="realizations" Relationship="Self.FK_realization_contacts" FromRole="contacts" ToRole="realization" />
+        </EntityType>
+        <EntityType Name="continuity">
+          <Key>
+            <PropertyRef Name="ID_continuity" />
+          </Key>
+          <Property Name="ID_continuity" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_continuity" FromRole="continuity" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="degreeNovelMark">
+          <Key>
+            <PropertyRef Name="ID_degreeNovelMark" />
+          </Key>
+          <Property Name="ID_degreeNovelMark" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_degreeNovelMark" FromRole="degreeNovelMark" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="degreeNovelPot">
+          <Key>
+            <PropertyRef Name="ID_degreeNovelPot" />
+          </Key>
+          <Property Name="ID_degreeNovelPot" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_degreeNovelPot" FromRole="degreeNovelPot" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="district">
+          <Key>
+            <PropertyRef Name="ID_district" />
+          </Key>
+          <Property Name="ID_district" Type="Int32" Nullable="false" />
+          <Property Name="district1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Addresses" Relationship="Self.FK_Address_districts" FromRole="districts" ToRole="Address" />
+        </EntityType>
+        <EntityType Name="expMarShare">
+          <Key>
+            <PropertyRef Name="ID_expMarShare" />
+          </Key>
+          <Property Name="ID_expMarShare" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_expMarShare" FromRole="expMarShare" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="FieldActivity">
+          <Key>
+            <PropertyRef Name="ID_fieldActivity" />
+          </Key>
+          <Property Name="ID_fieldActivity" Type="Int32" Nullable="false" />
+          <Property Name="fieldActivity1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="innovationWorksheets" Relationship="Self.FK_innovationWorksheet_FieldActivity" FromRole="FieldActivity" ToRole="innovationWorksheet" />
+          <NavigationProperty Name="worksheets" Relationship="Self.FK_worksheet_FieldActivity" FromRole="FieldActivity" ToRole="worksheet" />
+        </EntityType>
+        <EntityType Name="imactToEconomy">
+          <Key>
+            <PropertyRef Name="ID_imactToEconomy" />
+          </Key>
+          <Property Name="ID_imactToEconomy" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_imactToEconomy" FromRole="imactToEconomy" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="impactFactProd">
+          <Key>
+            <PropertyRef Name="ID_impactFactProd" />
+          </Key>
+          <Property Name="ID_impactFactProd" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_impactFactProd" FromRole="impactFactProd" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="impactProdProc">
+          <Key>
+            <PropertyRef Name="ID_impactProdProc" />
+          </Key>
+          <Property Name="ID_impactProdProc" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_impactProdProc" FromRole="impactProdProc" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="IndividualOrEntry">
+          <Key>
+            <PropertyRef Name="ID_IndOrEntr" />
+          </Key>
+          <Property Name="ID_IndOrEntr" Type="Int32" Nullable="false" />
+          <Property Name="Person" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PersonStatus" Relationship="Self.FK_PersonStatus_IndividualOrEntry" FromRole="IndividualOrEntry" ToRole="PersonStatus" />
+        </EntityType>
+        <EntityType Name="Innovation">
+          <Key>
+            <PropertyRef Name="ID_innovation" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_innovation" Type="Int32" Nullable="false" />
+          <Property Name="ID_innovWorksheet" Type="Int32" Nullable="false" />
+          <Property Name="ID_contactAuthor" Type="Int32" Nullable="false" />
+          <Property Name="ID_contactOwner" Type="Int32" Nullable="false" />
+          <Property Name="ID_sertificate" Type="Int32" />
+          <Property Name="ID_stateInnov" Type="Int32" />
+          <Property Name="effeciency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="registrationDate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+          <Property Name="lastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="ID_classification" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Classification" Relationship="Self.FK_Innovation_Classification" FromRole="Innovation" ToRole="Classification" />
+          <NavigationProperty Name="contact" Relationship="Self.FK_Innovation_contacts" FromRole="Innovation" ToRole="contacts" />
+          <NavigationProperty Name="contact1" Relationship="Self.FK_Innovation_contacts1" FromRole="Innovation" ToRole="contacts" />
+          <NavigationProperty Name="innovationWorksheet" Relationship="Self.FK_Innovation_innovationWorksheet" FromRole="Innovation" ToRole="innovationWorksheet" />
+          <NavigationProperty Name="Sertification" Relationship="Self.FK_Innovation_Sertification" FromRole="Innovation" ToRole="Sertification" />
+          <NavigationProperty Name="StatesInnovation" Relationship="Self.FK_Innovation_StatesInnovation" FromRole="Innovation" ToRole="StatesInnovation" />
+          <NavigationProperty Name="realizations" Relationship="Self.FK_realization_Innovation" FromRole="Innovation" ToRole="realization" />
+        </EntityType>
+        <EntityType Name="innovationWorksheet">
+          <Key>
+            <PropertyRef Name="ID_innowWorksheet" />
+          </Key>
+          <Property Name="ID_innowWorksheet" Type="Int32" Nullable="false" />
+          <Property Name="ID_fieldActivity" Type="Int32" />
+          <Property Name="ID_branch" Type="Int32" />
+          <Property Name="ware" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Branch" Relationship="Self.FK_innovationWorksheet_Branch" FromRole="innovationWorksheet" ToRole="Branch" />
+          <NavigationProperty Name="FieldActivity" Relationship="Self.FK_innovationWorksheet_FieldActivity" FromRole="innovationWorksheet" ToRole="FieldActivity" />
+          <NavigationProperty Name="Innovations" Relationship="Self.FK_Innovation_innovationWorksheet" FromRole="innovationWorksheet" ToRole="Innovation" />
+        </EntityType>
+        <EntityType Name="License">
+          <Key>
+            <PropertyRef Name="ID_license" />
+          </Key>
+          <Property Name="ID_license" Type="Int32" Nullable="false" />
+          <Property Name="numberLic" Type="Int32" Nullable="false" />
+          <Property Name="dateIssue" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="licDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ID_licenseCompany" Type="Int32" />
+          <Property Name="ID_company" Type="Int32" />
+          <NavigationProperty Name="Company" Relationship="Self.FK_License_Company" FromRole="License" ToRole="Company" />
+          <NavigationProperty Name="LicenseCompany" Relationship="Self.FK_License_LicenseCompany" FromRole="License" ToRole="LicenseCompany" />
+          <NavigationProperty Name="Sertifications" Relationship="Self.FK_Sertification_License" FromRole="License" ToRole="Sertification" />
+        </EntityType>
+        <EntityType Name="LicenseCompany">
+          <Key>
+            <PropertyRef Name="ID_licenseCompany" />
+          </Key>
+          <Property Name="ID_licenseCompany" Type="Int32" Nullable="false" />
+          <Property Name="licenseCompany1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Licenses" Relationship="Self.FK_License_LicenseCompany" FromRole="LicenseCompany" ToRole="License" />
+        </EntityType>
+        <EntityType Name="Ownersheep">
+          <Key>
+            <PropertyRef Name="ID_ownersheep" />
+          </Key>
+          <Property Name="ID_ownersheep" Type="Int32" Nullable="false" />
+          <Property Name="ownersheep1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="worksheets" Relationship="Self.FK_worksheet_Ownersheep" FromRole="Ownersheep" ToRole="worksheet" />
+        </EntityType>
+        <EntityType Name="PersonPost">
+          <Key>
+            <PropertyRef Name="ID_PersonPost" />
+          </Key>
+          <Property Name="ID_PersonPost" Type="Int32" Nullable="false" />
+          <Property Name="postName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PersonStatus" Relationship="Self.FK_PersonStatus_PersonPost" FromRole="PersonPost" ToRole="PersonStatus" />
+        </EntityType>
+        <EntityType Name="PersonStatu">
+          <Key>
+            <PropertyRef Name="ID_PersonStatus" />
+          </Key>
+          <Property Name="ID_PersonStatus" Type="Int32" Nullable="false" />
+          <Property Name="ID_PersonPost" Type="Int32" />
+          <Property Name="ID_IndividualOrEntry" Type="Int32" />
+          <NavigationProperty Name="contacts" Relationship="Self.FK_contacts_PersonStatus" FromRole="PersonStatus" ToRole="contacts" />
+          <NavigationProperty Name="IndividualOrEntry" Relationship="Self.FK_PersonStatus_IndividualOrEntry" FromRole="PersonStatus" ToRole="IndividualOrEntry" />
+          <NavigationProperty Name="PersonPost" Relationship="Self.FK_PersonStatus_PersonPost" FromRole="PersonStatus" ToRole="PersonPost" />
+        </EntityType>
+        <EntityType Name="placeProdCycle">
+          <Key>
+            <PropertyRef Name="ID_placeProdCycle" />
+          </Key>
+          <Property Name="ID_placeProdCycle" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_placeProdCycle" FromRole="placeProdCycle" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="Prevelency">
+          <Key>
+            <PropertyRef Name="ID_prevelency" />
+          </Key>
+          <Property Name="ID_prevelency" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classifications" Relationship="Self.FK_Classification_Prevelency" FromRole="Prevelency" ToRole="Classification" />
+        </EntityType>
+        <EntityType Name="realization">
+          <Key>
+            <PropertyRef Name="ID_realization" />
+          </Key>
+          <Property Name="ID_realization" Type="Int32" Nullable="false" />
+          <Property Name="ID_innovation" Type="Int32" Nullable="false" />
+          <Property Name="ID_company" Type="Int32" Nullable="false" />
+          <Property Name="ID_promoter" Type="Int32" Nullable="false" />
+          <Property Name="implementationState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Company" Relationship="Self.FK_realization_Company" FromRole="realization" ToRole="Company" />
+          <NavigationProperty Name="contact" Relationship="Self.FK_realization_contacts" FromRole="realization" ToRole="contacts" />
+          <NavigationProperty Name="Innovation" Relationship="Self.FK_realization_Innovation" FromRole="realization" ToRole="Innovation" />
+        </EntityType>
+        <EntityType Name="Sertification">
+          <Key>
+            <PropertyRef Name="ID_sertificate" />
+          </Key>
+          <Property Name="ID_sertificate" Type="Int32" Nullable="false" />
+          <Property Name="dateIssue" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="descriptioon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ID_License" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Innovations" Relationship="Self.FK_Innovation_Sertification" FromRole="Sertification" ToRole="Innovation" />
+          <NavigationProperty Name="License" Relationship="Self.FK_Sertification_License" FromRole="Sertification" ToRole="License" />
+        </EntityType>
+        <EntityType Name="StatesInnovation">
+          <Key>
+            <PropertyRef Name="ID_stateInnov" />
+          </Key>
+          <Property Name="ID_stateInnov" Type="Int32" Nullable="false" />
+          <Property Name="stateInnvoation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Innovations" Relationship="Self.FK_Innovation_StatesInnovation" FromRole="StatesInnovation" ToRole="Innovation" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="town">
+          <Key>
+            <PropertyRef Name="ID_town" />
+          </Key>
+          <Property Name="ID_town" Type="Int32" Nullable="false" />
+          <Property Name="town1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Addresses" Relationship="Self.FK_Address_towns" FromRole="towns" ToRole="Address" />
+        </EntityType>
+        <EntityType Name="worksheet">
+          <Key>
+            <PropertyRef Name="ID_worksheet" />
+          </Key>
+          <Property Name="ID_worksheet" Type="Int32" Nullable="false" />
+          <Property Name="ID_fieldActivity" Type="Int32" Nullable="false" />
+          <Property Name="ID_branch" Type="Int32" Nullable="false" />
+          <Property Name="ID_ownership" Type="Int32" Nullable="false" />
+          <Property Name="ware" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Branch" Relationship="Self.FK_worksheet_Branch" FromRole="worksheet" ToRole="Branch" />
+          <NavigationProperty Name="Companies" Relationship="Self.FK_Company_worksheet" FromRole="worksheet" ToRole="Company" />
+          <NavigationProperty Name="FieldActivity" Relationship="Self.FK_worksheet_FieldActivity" FromRole="worksheet" ToRole="FieldActivity" />
+          <NavigationProperty Name="Ownersheep" Relationship="Self.FK_worksheet_Ownersheep" FromRole="worksheet" ToRole="Ownersheep" />
+        </EntityType>
+        <EntityType Name="InformationAboutAuthor">
+          <Key>
+            <PropertyRef Name="Имя" />
+            <PropertyRef Name="Фамилия" />
+            <PropertyRef Name="Индивидуальный_статус" />
+            <PropertyRef Name="Должность" />
+            <PropertyRef Name="Область" />
+            <PropertyRef Name="Город" />
+            <PropertyRef Name="Улица" />
+            <PropertyRef Name="Дом" />
+          </Key>
+          <Property Name="Имя" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Фамилия" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Количество_проектов" Type="Int32" />
+          <Property Name="Индивидуальный_статус" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Должность" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Область" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Город" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Улица" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Дом" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Квартира" Type="Int32" />
+          <Property Name="Телефон" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="InformationAboutCompany">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="branch" />
+            <PropertyRef Name="fieldActivity" />
+            <PropertyRef Name="ware" />
+            <PropertyRef Name="ownersheep" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="branch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fieldActivity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ware" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ownersheep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InformationAboutRealization">
+          <Key>
+            <PropertyRef Name="Name_of_Innovation_Product" />
+            <PropertyRef Name="Name_of_Company" />
+            <PropertyRef Name="Surname_Promouter" />
+          </Key>
+          <Property Name="Name_of_Innovation_Product" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name_of_Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="implementationState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Surname_Promouter" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Address_districts">
+          <End Role="districts" Type="Self.district" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="districts">
+              <PropertyRef Name="ID_district" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="ID_district" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Address_towns">
+          <End Role="towns" Type="Self.town" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="towns">
+              <PropertyRef Name="ID_town" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="ID_town" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_contacts_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
+          <End Role="contacts" Type="Self.contact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="ID_address" />
+            </Principal>
+            <Dependent Role="contacts">
+              <PropertyRef Name="ID_address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_appArea">
+          <End Role="appArea" Type="Self.appArea" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="appArea">
+              <PropertyRef Name="ID_appArea" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_appArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_balanceInf_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="balanceInf" Type="Self.balanceInf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID_company" />
+            </Principal>
+            <Dependent Role="balanceInf">
+              <PropertyRef Name="ID_company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_innovationWorksheet_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="0..1" />
+          <End Role="innovationWorksheet" Type="Self.innovationWorksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="ID_branch" />
+            </Principal>
+            <Dependent Role="innovationWorksheet">
+              <PropertyRef Name="ID_branch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_worksheet_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="ID_branch" />
+            </Principal>
+            <Dependent Role="worksheet">
+              <PropertyRef Name="ID_branch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_causeOf">
+          <End Role="causeOf" Type="Self.causeOf" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="causeOf">
+              <PropertyRef Name="ID_causeOf" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_causeOf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_chaMeetNeedsOf">
+          <End Role="chaMeetNeedsOf" Type="Self.chaMeetNeedsOf" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chaMeetNeedsOf">
+              <PropertyRef Name="ID_chaMeetNeedsOf" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_chaMeetNeedsOf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_continuity">
+          <End Role="continuity" Type="Self.continuity" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="continuity">
+              <PropertyRef Name="ID_continuity" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_continuity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_degreeNovelMark">
+          <End Role="degreeNovelMark" Type="Self.degreeNovelMark" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degreeNovelMark">
+              <PropertyRef Name="ID_degreeNovelMark" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_degreeNovelMark" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_degreeNovelPot">
+          <End Role="degreeNovelPot" Type="Self.degreeNovelPot" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degreeNovelPot">
+              <PropertyRef Name="ID_degreeNovelPot" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_degreeNovelPot" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_expMarShare">
+          <End Role="expMarShare" Type="Self.expMarShare" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="expMarShare">
+              <PropertyRef Name="ID_expMarShare" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_expMarShare" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_imactToEconomy">
+          <End Role="imactToEconomy" Type="Self.imactToEconomy" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imactToEconomy">
+              <PropertyRef Name="ID_imactToEconomy" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_imactToEconomy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_impactFactProd">
+          <End Role="impactFactProd" Type="Self.impactFactProd" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="impactFactProd">
+              <PropertyRef Name="ID_impactFactProd" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_impactFactProd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_impactProdProc">
+          <End Role="impactProdProc" Type="Self.impactProdProc" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="impactProdProc">
+              <PropertyRef Name="ID_impactProdProc" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_impactProdProc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_placeProdCycle">
+          <End Role="placeProdCycle" Type="Self.placeProdCycle" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="placeProdCycle">
+              <PropertyRef Name="ID_placeProdCycle" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_placeProdCycle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classification_Prevelency">
+          <End Role="Prevelency" Type="Self.Prevelency" Multiplicity="1" />
+          <End Role="Classification" Type="Self.Classification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prevelency">
+              <PropertyRef Name="ID_prevelency" />
+            </Principal>
+            <Dependent Role="Classification">
+              <PropertyRef Name="ID_prevelency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_Classification">
+          <End Role="Classification" Type="Self.Classification" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classification">
+              <PropertyRef Name="ID_classification" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID_classification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_contacts1">
+          <End Role="contacts" Type="Self.contact" Multiplicity="1" />
+          <End Role="Company" Type="Self.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID_contact" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="ID_contact" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_worksheet">
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="1" />
+          <End Role="Company" Type="Self.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="worksheet">
+              <PropertyRef Name="ID_worksheet" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="ID_worksheet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_License_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="License" Type="Self.License" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID_company" />
+            </Principal>
+            <Dependent Role="License">
+              <PropertyRef Name="ID_company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_realization_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="realization" Type="Self.realization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID_company" />
+            </Principal>
+            <Dependent Role="realization">
+              <PropertyRef Name="ID_company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_contacts_CompanyState">
+          <End Role="CompanyState" Type="Self.CompanyState" Multiplicity="0..1" />
+          <End Role="contacts" Type="Self.contact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyState">
+              <PropertyRef Name="ID_companyState" />
+            </Principal>
+            <Dependent Role="contacts">
+              <PropertyRef Name="ID_CompanyState" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_contacts_PersonStatus">
+          <End Role="PersonStatus" Type="Self.PersonStatu" Multiplicity="1" />
+          <End Role="contacts" Type="Self.contact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonStatus">
+              <PropertyRef Name="ID_PersonStatus" />
+            </Principal>
+            <Dependent Role="contacts">
+              <PropertyRef Name="ID_PersonStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_contacts">
+          <End Role="contacts" Type="Self.contact" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID_contact" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID_contactAuthor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_contacts1">
+          <End Role="contacts" Type="Self.contact" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID_contact" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID_contactOwner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_realization_contacts">
+          <End Role="contacts" Type="Self.contact" Multiplicity="1" />
+          <End Role="realization" Type="Self.realization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contacts">
+              <PropertyRef Name="ID_contact" />
+            </Principal>
+            <Dependent Role="realization">
+              <PropertyRef Name="ID_promoter" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_innovationWorksheet_FieldActivity">
+          <End Role="FieldActivity" Type="Self.FieldActivity" Multiplicity="0..1" />
+          <End Role="innovationWorksheet" Type="Self.innovationWorksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldActivity">
+              <PropertyRef Name="ID_fieldActivity" />
+            </Principal>
+            <Dependent Role="innovationWorksheet">
+              <PropertyRef Name="ID_fieldActivity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_worksheet_FieldActivity">
+          <End Role="FieldActivity" Type="Self.FieldActivity" Multiplicity="1" />
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldActivity">
+              <PropertyRef Name="ID_fieldActivity" />
+            </Principal>
+            <Dependent Role="worksheet">
+              <PropertyRef Name="ID_fieldActivity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonStatus_IndividualOrEntry">
+          <End Role="IndividualOrEntry" Type="Self.IndividualOrEntry" Multiplicity="0..1" />
+          <End Role="PersonStatus" Type="Self.PersonStatu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IndividualOrEntry">
+              <PropertyRef Name="ID_IndOrEntr" />
+            </Principal>
+            <Dependent Role="PersonStatus">
+              <PropertyRef Name="ID_IndividualOrEntry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_innovationWorksheet">
+          <End Role="innovationWorksheet" Type="Self.innovationWorksheet" Multiplicity="1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="innovationWorksheet">
+              <PropertyRef Name="ID_innowWorksheet" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID_innovWorksheet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_Sertification">
+          <End Role="Sertification" Type="Self.Sertification" Multiplicity="0..1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sertification">
+              <PropertyRef Name="ID_sertificate" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID_sertificate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Innovation_StatesInnovation">
+          <End Role="StatesInnovation" Type="Self.StatesInnovation" Multiplicity="0..1" />
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatesInnovation">
+              <PropertyRef Name="ID_stateInnov" />
+            </Principal>
+            <Dependent Role="Innovation">
+              <PropertyRef Name="ID_stateInnov" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_realization_Innovation">
+          <End Role="Innovation" Type="Self.Innovation" Multiplicity="1" />
+          <End Role="realization" Type="Self.realization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Innovation">
+              <PropertyRef Name="ID_innovation" />
+            </Principal>
+            <Dependent Role="realization">
+              <PropertyRef Name="ID_innovation" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_License_LicenseCompany">
+          <End Role="LicenseCompany" Type="Self.LicenseCompany" Multiplicity="0..1" />
+          <End Role="License" Type="Self.License" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LicenseCompany">
+              <PropertyRef Name="ID_licenseCompany" />
+            </Principal>
+            <Dependent Role="License">
+              <PropertyRef Name="ID_licenseCompany" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sertification_License">
+          <End Role="License" Type="Self.License" Multiplicity="1" />
+          <End Role="Sertification" Type="Self.Sertification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="License">
+              <PropertyRef Name="ID_license" />
+            </Principal>
+            <Dependent Role="Sertification">
+              <PropertyRef Name="ID_License" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_worksheet_Ownersheep">
+          <End Role="Ownersheep" Type="Self.Ownersheep" Multiplicity="1" />
+          <End Role="worksheet" Type="Self.worksheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ownersheep">
+              <PropertyRef Name="ID_ownersheep" />
+            </Principal>
+            <Dependent Role="worksheet">
+              <PropertyRef Name="ID_ownership" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonStatus_PersonPost">
+          <End Role="PersonPost" Type="Self.PersonPost" Multiplicity="0..1" />
+          <End Role="PersonStatus" Type="Self.PersonStatu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonPost">
+              <PropertyRef Name="ID_PersonPost" />
+            </Principal>
+            <Dependent Role="PersonStatus">
+              <PropertyRef Name="ID_PersonPost" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="Self.Address" />
+          <EntitySet Name="appAreas" EntityType="Self.appArea" />
+          <EntitySet Name="balanceInfs" EntityType="Self.balanceInf" />
+          <EntitySet Name="Branches" EntityType="Self.Branch" />
+          <EntitySet Name="causeOfs" EntityType="Self.causeOf" />
+          <EntitySet Name="chaMeetNeedsOfs" EntityType="Self.chaMeetNeedsOf" />
+          <EntitySet Name="Classifications" EntityType="Self.Classification" />
+          <EntitySet Name="Companies" EntityType="Self.Company" />
+          <EntitySet Name="CompanyStates" EntityType="Self.CompanyState" />
+          <EntitySet Name="contacts" EntityType="Self.contact" />
+          <EntitySet Name="continuities" EntityType="Self.continuity" />
+          <EntitySet Name="degreeNovelMarks" EntityType="Self.degreeNovelMark" />
+          <EntitySet Name="degreeNovelPots" EntityType="Self.degreeNovelPot" />
+          <EntitySet Name="districts" EntityType="Self.district" />
+          <EntitySet Name="expMarShares" EntityType="Self.expMarShare" />
+          <EntitySet Name="FieldActivities" EntityType="Self.FieldActivity" />
+          <EntitySet Name="imactToEconomies" EntityType="Self.imactToEconomy" />
+          <EntitySet Name="impactFactProds" EntityType="Self.impactFactProd" />
+          <EntitySet Name="impactProdProcs" EntityType="Self.impactProdProc" />
+          <EntitySet Name="IndividualOrEntries" EntityType="Self.IndividualOrEntry" />
+          <EntitySet Name="Innovations" EntityType="Self.Innovation" />
+          <EntitySet Name="innovationWorksheets" EntityType="Self.innovationWorksheet" />
+          <EntitySet Name="Licenses" EntityType="Self.License" />
+          <EntitySet Name="LicenseCompanies" EntityType="Self.LicenseCompany" />
+          <EntitySet Name="Ownersheep" EntityType="Self.Ownersheep" />
+          <EntitySet Name="PersonPosts" EntityType="Self.PersonPost" />
+          <EntitySet Name="PersonStatus" EntityType="Self.PersonStatu" />
+          <EntitySet Name="placeProdCycles" EntityType="Self.placeProdCycle" />
+          <EntitySet Name="Prevelencies" EntityType="Self.Prevelency" />
+          <EntitySet Name="realizations" EntityType="Self.realization" />
+          <EntitySet Name="Sertifications" EntityType="Self.Sertification" />
+          <EntitySet Name="StatesInnovations" EntityType="Self.StatesInnovation" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="towns" EntityType="Self.town" />
+          <EntitySet Name="worksheets" EntityType="Self.worksheet" />
+          <EntitySet Name="InformationAboutAuthors" EntityType="Self.InformationAboutAuthor" />
+          <EntitySet Name="InformationAboutCompanies" EntityType="Self.InformationAboutCompany" />
+          <EntitySet Name="InformationAboutRealizations" EntityType="Self.InformationAboutRealization" />
+          <AssociationSet Name="FK_Address_districts" Association="Self.FK_Address_districts">
+            <End Role="districts" EntitySet="districts" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Address_towns" Association="Self.FK_Address_towns">
+            <End Role="towns" EntitySet="towns" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_contacts_Address" Association="Self.FK_contacts_Address">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="contacts" EntitySet="contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_appArea" Association="Self.FK_Classification_appArea">
+            <End Role="appArea" EntitySet="appAreas" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_balanceInf_Company" Association="Self.FK_balanceInf_Company">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="balanceInf" EntitySet="balanceInfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_innovationWorksheet_Branch" Association="Self.FK_innovationWorksheet_Branch">
+            <End Role="Branch" EntitySet="Branches" />
+            <End Role="innovationWorksheet" EntitySet="innovationWorksheets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_worksheet_Branch" Association="Self.FK_worksheet_Branch">
+            <End Role="Branch" EntitySet="Branches" />
+            <End Role="worksheet" EntitySet="worksheets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_causeOf" Association="Self.FK_Classification_causeOf">
+            <End Role="causeOf" EntitySet="causeOfs" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_chaMeetNeedsOf" Association="Self.FK_Classification_chaMeetNeedsOf">
+            <End Role="chaMeetNeedsOf" EntitySet="chaMeetNeedsOfs" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_continuity" Association="Self.FK_Classification_continuity">
+            <End Role="continuity" EntitySet="continuities" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_degreeNovelMark" Association="Self.FK_Classification_degreeNovelMark">
+            <End Role="degreeNovelMark" EntitySet="degreeNovelMarks" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_degreeNovelPot" Association="Self.FK_Classification_degreeNovelPot">
+            <End Role="degreeNovelPot" EntitySet="degreeNovelPots" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_expMarShare" Association="Self.FK_Classification_expMarShare">
+            <End Role="expMarShare" EntitySet="expMarShares" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_imactToEconomy" Association="Self.FK_Classification_imactToEconomy">
+            <End Role="imactToEconomy" EntitySet="imactToEconomies" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_impactFactProd" Association="Self.FK_Classification_impactFactProd">
+            <End Role="impactFactProd" EntitySet="impactFactProds" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_impactProdProc" Association="Self.FK_Classification_impactProdProc">
+            <End Role="impactProdProc" EntitySet="impactProdProcs" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_placeProdCycle" Association="Self.FK_Classification_placeProdCycle">
+            <End Role="placeProdCycle" EntitySet="placeProdCycles" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classification_Prevelency" Association="Self.FK_Classification_Prevelency">
+            <End Role="Prevelency" EntitySet="Prevelencies" />
+            <End Role="Classification" EntitySet="Classifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_Classification" Association="Self.FK_Innovation_Classification">
+            <End Role="Classification" EntitySet="Classifications" />
+            <End Role="Innovation" EntitySet="Innovations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_contacts1" Association="Self.FK_Company_contacts1">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_worksheet" Association="Self.FK_Company_worksheet">
+            <End Role="worksheet" EntitySet="worksheets" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_License_Company" Association="Self.FK_License_Company">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="License" EntitySet="Licenses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_realization_Company" Association="Self.FK_realization_Company">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="realization" EntitySet="realizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_contacts_CompanyState" Association="Self.FK_contacts_CompanyState">
+            <End Role="CompanyState" EntitySet="CompanyStates" />
+            <End Role="contacts" EntitySet="contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_contacts_PersonStatus" Association="Self.FK_contacts_PersonStatus">
+            <End Role="PersonStatus" EntitySet="PersonStatus" />
+            <End Role="contacts" EntitySet="contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_contacts" Association="Self.FK_Innovation_contacts">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="Innovation" EntitySet="Innovations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_contacts1" Association="Self.FK_Innovation_contacts1">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="Innovation" EntitySet="Innovations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_realization_contacts" Association="Self.FK_realization_contacts">
+            <End Role="contacts" EntitySet="contacts" />
+            <End Role="realization" EntitySet="realizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_innovationWorksheet_FieldActivity" Association="Self.FK_innovationWorksheet_FieldActivity">
+            <End Role="FieldActivity" EntitySet="FieldActivities" />
+            <End Role="innovationWorksheet" EntitySet="innovationWorksheets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_worksheet_FieldActivity" Association="Self.FK_worksheet_FieldActivity">
+            <End Role="FieldActivity" EntitySet="FieldActivities" />
+            <End Role="worksheet" EntitySet="worksheets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonStatus_IndividualOrEntry" Association="Self.FK_PersonStatus_IndividualOrEntry">
+            <End Role="IndividualOrEntry" EntitySet="IndividualOrEntries" />
+            <End Role="PersonStatus" EntitySet="PersonStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_innovationWorksheet" Association="Self.FK_Innovation_innovationWorksheet">
+            <End Role="innovationWorksheet" EntitySet="innovationWorksheets" />
+            <End Role="Innovation" EntitySet="Innovations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_Sertification" Association="Self.FK_Innovation_Sertification">
+            <End Role="Sertification" EntitySet="Sertifications" />
+            <End Role="Innovation" EntitySet="Innovations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Innovation_StatesInnovation" Association="Self.FK_Innovation_StatesInnovation">
+            <End Role="StatesInnovation" EntitySet="StatesInnovations" />
+            <End Role="Innovation" EntitySet="Innovations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_realization_Innovation" Association="Self.FK_realization_Innovation">
+            <End Role="Innovation" EntitySet="Innovations" />
+            <End Role="realization" EntitySet="realizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_License_LicenseCompany" Association="Self.FK_License_LicenseCompany">
+            <End Role="LicenseCompany" EntitySet="LicenseCompanies" />
+            <End Role="License" EntitySet="Licenses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sertification_License" Association="Self.FK_Sertification_License">
+            <End Role="License" EntitySet="Licenses" />
+            <End Role="Sertification" EntitySet="Sertifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_worksheet_Ownersheep" Association="Self.FK_worksheet_Ownersheep">
+            <End Role="Ownersheep" EntitySet="Ownersheep" />
+            <End Role="worksheet" EntitySet="worksheets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonStatus_PersonPost" Association="Self.FK_PersonStatus_PersonPost">
+            <End Role="PersonPost" EntitySet="PersonPosts" />
+            <End Role="PersonStatus" EntitySet="PersonStatus" />
+          </AssociationSet>
+          <FunctionImport Name="InnovationAfterDate" ReturnType="Collection(Model.InnovationAfterDate_Result)">
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="realizationInCompany" ReturnType="Collection(Model.realizationInCompany_Result)">
+            <Parameter Name="param" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="InnovationAfterDate_Result">
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Int32" Name="ID_innovation" Nullable="false" />
+          <Property Type="DateTime" Name="registrationDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="realizationInCompany_Result">
+          <Property Type="String" Name="Name_of_company" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="Name_of_Innovation_product" Nullable="false" />
+          <Property Type="String" Name="Implementation_state_of_innovation_product" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="Model.Address">
+              <MappingFragment StoreEntitySet="Address">
+                <ScalarProperty Name="ID_address" ColumnName="ID address" />
+                <ScalarProperty Name="ID_district" ColumnName="ID district" />
+                <ScalarProperty Name="ID_town" ColumnName="ID town" />
+                <ScalarProperty Name="street" ColumnName="street" />
+                <ScalarProperty Name="house" ColumnName="house" />
+                <ScalarProperty Name="flat" ColumnName="flat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="appAreas">
+            <EntityTypeMapping TypeName="Model.appArea">
+              <MappingFragment StoreEntitySet="appArea">
+                <ScalarProperty Name="ID_appArea" ColumnName="ID appArea" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="balanceInfs">
+            <EntityTypeMapping TypeName="Model.balanceInf">
+              <MappingFragment StoreEntitySet="balanceInf">
+                <ScalarProperty Name="ID_company" ColumnName="ID company" />
+                <ScalarProperty Name="ID_balance" ColumnName="ID balance" />
+                <ScalarProperty Name="activ" ColumnName="activ" />
+                <ScalarProperty Name="passiv" ColumnName="passiv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Branches">
+            <EntityTypeMapping TypeName="Model.Branch">
+              <MappingFragment StoreEntitySet="Branch">
+                <ScalarProperty Name="ID_branch" ColumnName="ID branch" />
+                <ScalarProperty Name="branch1" ColumnName="branch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="causeOfs">
+            <EntityTypeMapping TypeName="Model.causeOf">
+              <MappingFragment StoreEntitySet="causeOf">
+                <ScalarProperty Name="ID_causeOf" ColumnName="ID causeOf" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chaMeetNeedsOfs">
+            <EntityTypeMapping TypeName="Model.chaMeetNeedsOf">
+              <MappingFragment StoreEntitySet="chaMeetNeedsOf">
+                <ScalarProperty Name="ID_chaMeetNeedsOf" ColumnName="ID chaMeetNeedsOf" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Classifications">
+            <EntityTypeMapping TypeName="Model.Classification">
+              <MappingFragment StoreEntitySet="Classification">
+                <ScalarProperty Name="ID_classification" ColumnName="ID classification" />
+                <ScalarProperty Name="ID_prevelency" ColumnName="ID prevelency" />
+                <ScalarProperty Name="ID_placeProdCycle" ColumnName="ID placeProdCycle" />
+                <ScalarProperty Name="ID_continuity" ColumnName="ID continuity" />
+                <ScalarProperty Name="ID_expMarShare" ColumnName="ID expMarShare" />
+                <ScalarProperty Name="ID_degreeNovelPot" ColumnName="ID degreeNovelPot" />
+                <ScalarProperty Name="ID_degreeNovelMark" ColumnName="ID degreeNovelMark" />
+                <ScalarProperty Name="ID_imactToEconomy" ColumnName="ID imactToEconomy" />
+                <ScalarProperty Name="ID_impactProdProc" ColumnName="ID impactProdProc" />
+                <ScalarProperty Name="ID_impactFactProd" ColumnName="ID impactFactProd" />
+                <ScalarProperty Name="ID_appArea" ColumnName="ID appArea" />
+                <ScalarProperty Name="ID_causeOf" ColumnName="ID causeOf" />
+                <ScalarProperty Name="ID_chaMeetNeedsOf" ColumnName="ID chaMeetNeedsOf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="Model.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ID_adress" ColumnName="ID adress" />
+                <ScalarProperty Name="ID_contact" ColumnName="ID contact" />
+                <ScalarProperty Name="ID_company" ColumnName="ID company" />
+                <ScalarProperty Name="ID_worksheet" ColumnName="ID worksheet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyStates">
+            <EntityTypeMapping TypeName="Model.CompanyState">
+              <MappingFragment StoreEntitySet="CompanyState">
+                <ScalarProperty Name="ID_companyState" ColumnName="ID companyState" />
+                <ScalarProperty Name="companyState1" ColumnName="companyState" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contacts">
+            <EntityTypeMapping TypeName="Model.contact">
+              <MappingFragment StoreEntitySet="contacts">
+                <ScalarProperty Name="ID_contact" ColumnName="ID contact" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="secondName" ColumnName="secondName" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="ID_address" ColumnName="ID address" />
+                <ScalarProperty Name="ID_CompanyState" ColumnName="ID CompanyState" />
+                <ScalarProperty Name="ID_PersonStatus" ColumnName="ID PersonStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="continuities">
+            <EntityTypeMapping TypeName="Model.continuity">
+              <MappingFragment StoreEntitySet="continuity">
+                <ScalarProperty Name="ID_continuity" ColumnName="ID continuity" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="degreeNovelMarks">
+            <EntityTypeMapping TypeName="Model.degreeNovelMark">
+              <MappingFragment StoreEntitySet="degreeNovelMark">
+                <ScalarProperty Name="ID_degreeNovelMark" ColumnName="ID degreeNovelMark" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="degreeNovelPots">
+            <EntityTypeMapping TypeName="Model.degreeNovelPot">
+              <MappingFragment StoreEntitySet="degreeNovelPot">
+                <ScalarProperty Name="ID_degreeNovelPot" ColumnName="ID degreeNovelPot" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="districts">
+            <EntityTypeMapping TypeName="Model.district">
+              <MappingFragment StoreEntitySet="districts">
+                <ScalarProperty Name="ID_district" ColumnName="ID district" />
+                <ScalarProperty Name="district1" ColumnName="district" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="expMarShares">
+            <EntityTypeMapping TypeName="Model.expMarShare">
+              <MappingFragment StoreEntitySet="expMarShare">
+                <ScalarProperty Name="ID_expMarShare" ColumnName="ID expMarShare" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FieldActivities">
+            <EntityTypeMapping TypeName="Model.FieldActivity">
+              <MappingFragment StoreEntitySet="FieldActivity">
+                <ScalarProperty Name="ID_fieldActivity" ColumnName="ID fieldActivity" />
+                <ScalarProperty Name="fieldActivity1" ColumnName="fieldActivity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="imactToEconomies">
+            <EntityTypeMapping TypeName="Model.imactToEconomy">
+              <MappingFragment StoreEntitySet="imactToEconomy">
+                <ScalarProperty Name="ID_imactToEconomy" ColumnName="ID imactToEconomy" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="impactFactProds">
+            <EntityTypeMapping TypeName="Model.impactFactProd">
+              <MappingFragment StoreEntitySet="impactFactProd">
+                <ScalarProperty Name="ID_impactFactProd" ColumnName="ID impactFactProd" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="impactProdProcs">
+            <EntityTypeMapping TypeName="Model.impactProdProc">
+              <MappingFragment StoreEntitySet="impactProdProc">
+                <ScalarProperty Name="ID_impactProdProc" ColumnName="ID impactProdProc" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IndividualOrEntries">
+            <EntityTypeMapping TypeName="Model.IndividualOrEntry">
+              <MappingFragment StoreEntitySet="IndividualOrEntry">
+                <ScalarProperty Name="ID_IndOrEntr" ColumnName="ID IndOrEntr" />
+                <ScalarProperty Name="Person" ColumnName="Person" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Innovations">
+            <EntityTypeMapping TypeName="Model.Innovation">
+              <MappingFragment StoreEntitySet="Innovation">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID_innovation" ColumnName="ID innovation" />
+                <ScalarProperty Name="ID_innovWorksheet" ColumnName="ID innovWorksheet" />
+                <ScalarProperty Name="ID_contactAuthor" ColumnName="ID contactAuthor" />
+                <ScalarProperty Name="ID_contactOwner" ColumnName="ID contactOwner" />
+                <ScalarProperty Name="ID_sertificate" ColumnName="ID sertificate" />
+                <ScalarProperty Name="ID_stateInnov" ColumnName="ID stateInnov" />
+                <ScalarProperty Name="effeciency" ColumnName="effeciency" />
+                <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+                <ScalarProperty Name="lastUpdate" ColumnName="lastUpdate" />
+                <ScalarProperty Name="ID_classification" ColumnName="ID classification" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="innovationWorksheets">
+            <EntityTypeMapping TypeName="Model.innovationWorksheet">
+              <MappingFragment StoreEntitySet="innovationWorksheet">
+                <ScalarProperty Name="ID_innowWorksheet" ColumnName="ID innowWorksheet" />
+                <ScalarProperty Name="ID_fieldActivity" ColumnName="ID fieldActivity" />
+                <ScalarProperty Name="ID_branch" ColumnName="ID branch" />
+                <ScalarProperty Name="ware" ColumnName="ware" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Licenses">
+            <EntityTypeMapping TypeName="Model.License">
+              <MappingFragment StoreEntitySet="License">
+                <ScalarProperty Name="ID_license" ColumnName="ID license" />
+                <ScalarProperty Name="numberLic" ColumnName="numberLic" />
+                <ScalarProperty Name="dateIssue" ColumnName="dateIssue" />
+                <ScalarProperty Name="licDescription" ColumnName="licDescription" />
+                <ScalarProperty Name="ID_licenseCompany" ColumnName="ID licenseCompany" />
+                <ScalarProperty Name="ID_company" ColumnName="ID company" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LicenseCompanies">
+            <EntityTypeMapping TypeName="Model.LicenseCompany">
+              <MappingFragment StoreEntitySet="LicenseCompany">
+                <ScalarProperty Name="ID_licenseCompany" ColumnName="ID licenseCompany" />
+                <ScalarProperty Name="licenseCompany1" ColumnName="licenseCompany" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ownersheep">
+            <EntityTypeMapping TypeName="Model.Ownersheep">
+              <MappingFragment StoreEntitySet="Ownersheep">
+                <ScalarProperty Name="ID_ownersheep" ColumnName="ID ownersheep" />
+                <ScalarProperty Name="ownersheep1" ColumnName="ownersheep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonPosts">
+            <EntityTypeMapping TypeName="Model.PersonPost">
+              <MappingFragment StoreEntitySet="PersonPost">
+                <ScalarProperty Name="ID_PersonPost" ColumnName="ID PersonPost" />
+                <ScalarProperty Name="postName" ColumnName="postName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonStatus">
+            <EntityTypeMapping TypeName="Model.PersonStatu">
+              <MappingFragment StoreEntitySet="PersonStatus">
+                <ScalarProperty Name="ID_PersonStatus" ColumnName="ID PersonStatus" />
+                <ScalarProperty Name="ID_PersonPost" ColumnName="ID PersonPost" />
+                <ScalarProperty Name="ID_IndividualOrEntry" ColumnName="ID IndividualOrEntry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="placeProdCycles">
+            <EntityTypeMapping TypeName="Model.placeProdCycle">
+              <MappingFragment StoreEntitySet="placeProdCycle">
+                <ScalarProperty Name="ID_placeProdCycle" ColumnName="ID placeProdCycle" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prevelencies">
+            <EntityTypeMapping TypeName="Model.Prevelency">
+              <MappingFragment StoreEntitySet="Prevelency">
+                <ScalarProperty Name="ID_prevelency" ColumnName="ID prevelency" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="realizations">
+            <EntityTypeMapping TypeName="Model.realization">
+              <MappingFragment StoreEntitySet="realization">
+                <ScalarProperty Name="ID_realization" ColumnName="ID realization" />
+                <ScalarProperty Name="ID_innovation" ColumnName="ID innovation" />
+                <ScalarProperty Name="ID_company" ColumnName="ID company" />
+                <ScalarProperty Name="ID_promoter" ColumnName="ID promoter" />
+                <ScalarProperty Name="implementationState" ColumnName="implementationState" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sertifications">
+            <EntityTypeMapping TypeName="Model.Sertification">
+              <MappingFragment StoreEntitySet="Sertification">
+                <ScalarProperty Name="ID_sertificate" ColumnName="ID sertificate" />
+                <ScalarProperty Name="dateIssue" ColumnName="dateIssue" />
+                <ScalarProperty Name="descriptioon" ColumnName="descriptioon" />
+                <ScalarProperty Name="ID_License" ColumnName="ID License" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatesInnovations">
+            <EntityTypeMapping TypeName="Model.StatesInnovation">
+              <MappingFragment StoreEntitySet="StatesInnovation">
+                <ScalarProperty Name="ID_stateInnov" ColumnName="ID stateInnov" />
+                <ScalarProperty Name="stateInnvoation" ColumnName="stateInnvoation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="towns">
+            <EntityTypeMapping TypeName="Model.town">
+              <MappingFragment StoreEntitySet="towns">
+                <ScalarProperty Name="ID_town" ColumnName="ID town" />
+                <ScalarProperty Name="town1" ColumnName="town" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="worksheets">
+            <EntityTypeMapping TypeName="Model.worksheet">
+              <MappingFragment StoreEntitySet="worksheet">
+                <ScalarProperty Name="ID_worksheet" ColumnName="ID worksheet" />
+                <ScalarProperty Name="ID_fieldActivity" ColumnName="ID fieldActivity" />
+                <ScalarProperty Name="ID_branch" ColumnName="ID branch" />
+                <ScalarProperty Name="ID_ownership" ColumnName="ID ownership" />
+                <ScalarProperty Name="ware" ColumnName="ware" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformationAboutAuthors">
+            <EntityTypeMapping TypeName="Model.InformationAboutAuthor">
+              <MappingFragment StoreEntitySet="InformationAboutAuthors">
+                <ScalarProperty Name="Имя" ColumnName="Имя" />
+                <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+                <ScalarProperty Name="Количество_проектов" ColumnName="Количество проектов" />
+                <ScalarProperty Name="Индивидуальный_статус" ColumnName="Индивидуальный статус" />
+                <ScalarProperty Name="Должность" ColumnName="Должность" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="Область" ColumnName="Область" />
+                <ScalarProperty Name="Город" ColumnName="Город" />
+                <ScalarProperty Name="Улица" ColumnName="Улица" />
+                <ScalarProperty Name="Дом" ColumnName="Дом" />
+                <ScalarProperty Name="Квартира" ColumnName="Квартира" />
+                <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformationAboutCompanies">
+            <EntityTypeMapping TypeName="Model.InformationAboutCompany">
+              <MappingFragment StoreEntitySet="InformationAboutCompanies">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+                <ScalarProperty Name="fieldActivity" ColumnName="fieldActivity" />
+                <ScalarProperty Name="ware" ColumnName="ware" />
+                <ScalarProperty Name="ownersheep" ColumnName="ownersheep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformationAboutRealizations">
+            <EntityTypeMapping TypeName="Model.InformationAboutRealization">
+              <MappingFragment StoreEntitySet="InformationAboutRealization">
+                <ScalarProperty Name="Name_of_Innovation_Product" ColumnName="Name of Innovation Product" />
+                <ScalarProperty Name="Name_of_Company" ColumnName="Name of Company" />
+                <ScalarProperty Name="implementationState" ColumnName="implementationState" />
+                <ScalarProperty Name="Surname_Promouter" ColumnName="Surname Promouter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="InnovationAfterDate" FunctionName="Model.Store.InnovationAfterDate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.InnovationAfterDate_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID_innovation" ColumnName="ID innovation" />
+                <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="realizationInCompany" FunctionName="Model.Store.realizationInCompany">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.realizationInCompany_Result">
+                <ScalarProperty Name="Name_of_company" ColumnName="Name of company" />
+                <ScalarProperty Name="Name_of_Innovation_product" ColumnName="Name of Innovation product" />
+                <ScalarProperty Name="Implementation_state_of_innovation_product" ColumnName="Implementation state of innovation product" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Model.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Model.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Model.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Model.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Model.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Model.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Model.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

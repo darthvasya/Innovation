@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b00e3818242a4df39346971a8ac69662" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="Model.Address" Width="1.5" PointX="0.75" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.appArea" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.balanceInf" Width="1.5" PointX="3.75" PointY="68.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Branch" Width="1.5" PointX="0.75" PointY="57.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.causeOf" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.chaMeetNeedsOf" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Classification" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Company" Width="1.5" PointX="1.5" PointY="67.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CompanyState" Width="1.5" PointX="0.75" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.contact" Width="1.5" PointX="3" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.continuity" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.degreeNovelMark" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.degreeNovelPot" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.district" Width="1.5" PointX="1.5" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.expMarShare" Width="1.5" PointX="0.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FieldActivity" Width="1.5" PointX="0.75" PointY="60.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.imactToEconomy" Width="1.5" PointX="0.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.impactFactProd" Width="1.5" PointX="0.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.impactProdProc" Width="1.5" PointX="0.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.IndividualOrEntry" Width="1.5" PointX="1.5" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Innovation" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.innovationWorksheet" Width="1.5" PointX="3" PointY="58.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.License" Width="1.5" PointX="0.75" PointY="64" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.LicenseCompany" Width="1.5" PointX="1.5" PointY="78.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Ownersheep" Width="1.5" PointX="1.5" PointY="75.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PersonPost" Width="1.5" PointX="1.5" PointY="55.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PersonStatu" Width="1.5" PointX="0.75" PointY="49.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.placeProdCycle" Width="1.5" PointX="0.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Prevelency" Width="1.5" PointX="0.75" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.realization" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sertification" Width="1.5" PointX="3" PointY="64.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.StatesInnovation" Width="1.5" PointX="3" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.town" Width="1.5" PointX="1.5" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.worksheet" Width="1.5" PointX="1.5" PointY="71.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.InformationAboutAuthor" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.InformationAboutCompany" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.InformationAboutRealization" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Address_districts" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Address_towns" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_contacts_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_appArea" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_balanceInf_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_innovationWorksheet_Branch" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_worksheet_Branch" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_causeOf" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_chaMeetNeedsOf" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_continuity" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_degreeNovelMark" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_degreeNovelPot" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_expMarShare" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_imactToEconomy" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_impactFactProd" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_impactProdProc" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_placeProdCycle" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Classification_Prevelency" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Innovation_Classification" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Company_contacts1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Company_worksheet" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_License_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_realization_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_contacts_CompanyState" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_contacts_PersonStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Innovation_contacts" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Innovation_contacts1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_realization_contacts" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_innovationWorksheet_FieldActivity" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_worksheet_FieldActivity" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PersonStatus_IndividualOrEntry" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Innovation_innovationWorksheet" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Innovation_Sertification" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Innovation_StatesInnovation" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_realization_Innovation" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_License_LicenseCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Sertification_License" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_worksheet_Ownersheep" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PersonStatus_PersonPost" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

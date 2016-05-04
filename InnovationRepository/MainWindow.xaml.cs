@@ -23,6 +23,18 @@ namespace InnovationRepository
         public MainWindow()
         {
             InitializeComponent();
+            LoadTestEntity();
+        }
+
+        private void LoadTestEntity()
+        {
+            Entities context = new Entities();
+            string x = "";
+            foreach (Company cm in context.Companies)
+            {
+                x += (" | " + cm.name);
+            }
+            MessageBox.Show(x);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
