@@ -30,10 +30,13 @@ namespace InnovationRepository
         {
             Entities context = new Entities();
             string x = "";
-            foreach (Company cm in context.Companies)
-            {
-                x += (" | " + cm.name);
-            }
+            //foreach (Company cm in context.Companies)
+            //{
+            //    x += (" | " + cm.name);
+            //}
+            
+            Company cm = context.Companies.Find(2);
+            x = cm.name.ToString();
             MessageBox.Show(x);
         }
 

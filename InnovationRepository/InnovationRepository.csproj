@@ -144,6 +144,7 @@
     <Compile Include="innovationWorksheet.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="IObject.cs" />
     <Compile Include="License.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -242,6 +243,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
