@@ -5,8 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InnovationRepository"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Column="1"  Grid.Row="0" ShowsPreview="False" Width="3"
+        HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="3"
+        HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Canvas Grid.Column="0" Grid.Row="0" Margin="0,3,0,0" Grid.RowSpan="2">
+            <Label Canvas.Left="169" FontSize="32">Предприятия</Label>
+            <Button Canvas.Left="10" Canvas.Top="58" Height="43" Width="125" FontSize="18" Click="Button_Click">Подробнее</Button>
+            <Button Canvas.Left="157" Canvas.Top="58" Height="43" Width="262" FontSize="18" Content="Добавить новое предприятие"/>
+            <Button Canvas.Left="440" Canvas.Top="58" Height="43" Width="156" FontSize="18" Content="Редактировать"/>
+            <StackPanel Height="51" Canvas.Left="10" Canvas.Top="150" Width="586" Background="#FF747474" >
+                <TextBlock x:Name="textBlockName" TextWrapping="Wrap" Text="Очень длинное название предприятия" FontSize="14" Margin="10,5,371,0" Height="40" Background="#FF4E8FEC" TextAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="textBlockBranch" TextWrapping="Wrap" Text="Сельское хозяйство" FontSize="14" Margin="232,-40,101,0" Height="40" Background="#FF9B9B9B" TextAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="textBlockCountInn" TextWrapping="Wrap" Text="14" FontSize="14" Margin="503,-40,10,0" Height="40" Background="#FF8FCFA6" TextAlignment="Center" VerticalAlignment="Center" TextDecorations="{x:Null}"/>
+
+
+            </StackPanel>
+            <Label x:Name="label" Content="Название" Canvas.Left="50" Canvas.Top="114" RenderTransformOrigin="0.237,-0.154" Width="103" FontSize="16"/>
+            <Label x:Name="label_Copy" Content="Отрасль" Canvas.Left="300" Canvas.Top="114" RenderTransformOrigin="0.237,-0.154" Width="103" FontSize="16"/>
+            <Label x:Name="label_Copy1" Content="Кол. иннов" Canvas.Left="493" Canvas.Top="119" RenderTransformOrigin="0.237,-0.154" Width="103" FontSize="16"/>
+            <StackPanel Height="51" Canvas.Left="10" Canvas.Top="206" Width="586" Background="#FF747474" >
+                <TextBlock x:Name="textBlockName1" TextWrapping="Wrap" Text="Очень длинное название предприятия" FontSize="14" Margin="10,5,371,0" Height="40" Background="#FF4E8FEC" TextAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="textBlockBranch1" TextWrapping="Wrap" Text="Сельское хозяйство" FontSize="14" Margin="232,-40,101,0" Height="40" Background="#FF9B9B9B" TextAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="textBlockCountInn1" TextWrapping="Wrap" Text="14" FontSize="14" Margin="503,-40,10,0" Height="40" Background="#FF8FCFA6" TextAlignment="Center" VerticalAlignment="Center" TextDecorations="{x:Null}"/>
+
+
+            </StackPanel>
+            <StackPanel Height="51" Canvas.Left="10" Canvas.Top="262" Width="586" Background="#FF747474" >
+                <TextBlock x:Name="textBlockName2" TextWrapping="Wrap" Text="Очень длинное название предприятия" FontSize="14" Margin="10,5,371,0" Height="40" Background="#FF4E8FEC" TextAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="textBlockBranch2" TextWrapping="Wrap" Text="Сельское хозяйство" FontSize="14" Margin="232,-40,101,0" Height="40" Background="#FF9B9B9B" TextAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="textBlockCountInn2" TextWrapping="Wrap" Text="14" FontSize="14" Margin="503,-40,10,0" Height="40" Background="#FF8FCFA6" TextAlignment="Center" VerticalAlignment="Center" TextDecorations="{x:Null}"/>
+
+
+            </StackPanel>
+
+
+        </Canvas>
+        <Canvas Grid.Column="2" Grid.Row="0" Background="LightGreen">
+            <TextBlock>Правая панель</TextBlock>
+        </Canvas>
+        <Canvas Grid.ColumnSpan="3" Grid.Row="2" Background="#dfffff">
+            <TextBlock Canvas.Left="60">Нижняя панель</TextBlock>
+        </Canvas>
     </Grid>
+
 </Window>
