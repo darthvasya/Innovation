@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace InnovationRepository
 {
-    interface IObject
+    public interface IObject
     {
-        string errMessage { get; set; }
+        string name { get; }
+        string errMessage { get; }
 
         void getInformation();
         void addNewItem();

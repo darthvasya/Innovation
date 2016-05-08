@@ -28,21 +28,35 @@ namespace InnovationRepository
 
         private void LoadTestEntity()
         {
-            Entities context = new Entities();
-            string x = "";
-            //foreach (Company cm in context.Companies)
-            //{
-            //    x += (" | " + cm.name);
-            //}
-            
-            Company cm = context.Companies.Find(2);
-            x = cm.name.ToString();
-            MessageBox.Show(x);
+            try
+            {
+                Entities context = new Entities();
+                string x = "";
+                //foreach (Company cm in context.Companies)
+                //{
+                //    x += (" | " + cm.name);
+                //}
+
+                Company cm = context.Companies.Find(2);
+                x = cm.name.ToString();
+                MessageBox.Show(x);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("s");
+            MyCompany myc = new MyCompany("addres", "FirstName");
+            myc.addNewItem();
+            myc.getInformation();
+            myc.Edit();
+
+            
+
+ 
         }
     }
 }
