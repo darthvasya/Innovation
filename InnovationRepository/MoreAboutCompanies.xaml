@@ -1,0 +1,27 @@
+﻿<Window x:Class="InnovationRepository.MoreAboutCompanies"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InnovationRepository"
+        mc:Ignorable="d"
+        Title="MoreAboutCompanies" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="328,112,0,0" VerticalAlignment="Top"/>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" x:Name="companysGrid" Grid.ColumnSpan="2" SelectionChanged="companysGrid_SelectionChanged">
+            <DataGrid.Columns>
+                --><!--<DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Company}" Header="Производитель" Width="110"/>
+                <DataGridTextColumn Binding="{Binding Price}" Header="Цена" Width="70"/>--><!--
+            </DataGrid.Columns>
+        </DataGrid>-->
+    </Grid>
+</Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InnovationRepository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,15 +32,25 @@ namespace InnovationRepository
             try
             {
                 Entities context = new Entities();
-                string x = "";
-                //foreach (Company cm in context.Companies)
-                //{
-                //    x += (" | " + cm.name);
-                //}
 
-                Company cm = context.Companies.Find(2);
-                x = cm.name.ToString();
-                MessageBox.Show(x);
+                //происходит выборка первых, нужно сделать последних, 
+                //мб ид в представление засунуть и по нему сортировать
+                List<InformationAboutCompany> comp = (from p in context.InformationAboutCompanies select p).Take(3).ToList();
+
+                nameCompFirst.Text = comp[0].name;
+                nameCompSecond.Text = comp[1].name;
+                nameCompThird.Text = comp[2].name;
+
+                branchCompFirst.Text = comp[0].branch;
+                branchCompSecond.Text = comp[1].branch;
+                branchCompThird.Text = comp[2].branch;
+
+                wareCompFirst.Text = comp[0].ware;
+                wareCompSecond.Text = comp[1].ware;
+                wareCompThird.Text = comp[2].ware;
+
+
+
             }
             catch(Exception ex)
             {
@@ -49,14 +60,8 @@ namespace InnovationRepository
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MyCompany myc = new MyCompany("addres", "FirstName");
-            myc.addNewItem();
-            myc.getInformation();
-            myc.Edit();
-
-            
-
- 
+            MoreAboutCompanies macWindow = new MoreAboutCompanies();
+            macWindow.Show();
         }
     }
 }
