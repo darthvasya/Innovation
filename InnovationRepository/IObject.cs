@@ -7,7 +7,7 @@ namespace InnovationRepository
 {
     public interface IObject
     {
-        string name { get; }
+ 
         string errMessage { get; }
 
         void getInformation();

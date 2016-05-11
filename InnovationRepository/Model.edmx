@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Address">
           <Key>
             <PropertyRef Name="ID address" />
@@ -351,12 +351,31 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutCompanies' do
             <PropertyRef Name="fieldActivity" />
             <PropertyRef Name="ware" />
             <PropertyRef Name="ownersheep" />
+            <PropertyRef Name="district" />
+            <PropertyRef Name="town" />
+            <PropertyRef Name="house" />
+            <PropertyRef Name="street" />
+            <PropertyRef Name="secondName" />
+            <PropertyRef Name="surname" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="ID company" />
           </Key>
           <Property Name="name" Type="ntext" Nullable="false" />
           <Property Name="branch" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fieldActivity" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ware" Type="text" Nullable="false" />
           <Property Name="ownersheep" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="district" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="town" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="telephone" Type="varchar" MaxLength="50" />
+          <Property Name="flat" Type="int" />
+          <Property Name="house" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="street" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="secondName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="surname" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Expr1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ID company" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -934,7 +953,18 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
     [InformationAboutCompanies].[branch] AS [branch], 
     [InformationAboutCompanies].[fieldActivity] AS [fieldActivity], 
     [InformationAboutCompanies].[ware] AS [ware], 
-    [InformationAboutCompanies].[ownersheep] AS [ownersheep]
+    [InformationAboutCompanies].[ownersheep] AS [ownersheep], 
+    [InformationAboutCompanies].[district] AS [district], 
+    [InformationAboutCompanies].[town] AS [town], 
+    [InformationAboutCompanies].[email] AS [email], 
+    [InformationAboutCompanies].[telephone] AS [telephone], 
+    [InformationAboutCompanies].[flat] AS [flat], 
+    [InformationAboutCompanies].[house] AS [house], 
+    [InformationAboutCompanies].[street] AS [street], 
+    [InformationAboutCompanies].[secondName] AS [secondName], 
+    [InformationAboutCompanies].[surname] AS [surname], 
+    [InformationAboutCompanies].[Expr1] AS [Expr1], 
+    [InformationAboutCompanies].[ID company] AS [ID company]
     FROM [dbo].[InformationAboutCompanies] AS [InformationAboutCompanies]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="InformationAboutRealization" EntityType="Self.InformationAboutRealization" store:Type="Views" store:Schema="dbo">
@@ -1102,8 +1132,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
             <End Role="worksheet" EntitySet="worksheet" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1527,12 +1556,31 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
             <PropertyRef Name="fieldActivity" />
             <PropertyRef Name="ware" />
             <PropertyRef Name="ownersheep" />
+            <PropertyRef Name="district" />
+            <PropertyRef Name="town" />
+            <PropertyRef Name="house" />
+            <PropertyRef Name="street" />
+            <PropertyRef Name="secondName" />
+            <PropertyRef Name="surname" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="ID_company" />
           </Key>
           <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="branch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fieldActivity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ware" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ownersheep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="district" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="town" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="flat" Type="Int32" />
+          <Property Name="house" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="street" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="secondName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="surname" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Expr1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ID_company" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="InformationAboutRealization">
           <Key>
@@ -2209,10 +2257,10 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
             <End Role="PersonStatus" EntitySet="PersonStatus" />
           </AssociationSet>
           <FunctionImport Name="InnovationAfterDate" ReturnType="Collection(Model.InnovationAfterDate_Result)">
-            <Parameter Name="date" Mode="In" Type="DateTime" />
+          <Parameter Name="date" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="realizationInCompany" ReturnType="Collection(Model.realizationInCompany_Result)">
-            <Parameter Name="param" Mode="In" Type="Int32" />
+          <Parameter Name="param" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -2639,6 +2687,17 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <EntitySetMapping Name="InformationAboutCompanies">
             <EntityTypeMapping TypeName="Model.InformationAboutCompany">
               <MappingFragment StoreEntitySet="InformationAboutCompanies">
+                <ScalarProperty Name="ID_company" ColumnName="ID company" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="secondName" ColumnName="secondName" />
+                <ScalarProperty Name="street" ColumnName="street" />
+                <ScalarProperty Name="house" ColumnName="house" />
+                <ScalarProperty Name="flat" ColumnName="flat" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="town" ColumnName="town" />
+                <ScalarProperty Name="district" ColumnName="district" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="branch" ColumnName="branch" />
                 <ScalarProperty Name="fieldActivity" ColumnName="fieldActivity" />

@@ -1,0 +1,28 @@
+﻿<Window x:Class="InnovationRepository.CompanyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InnovationRepository"
+        mc:Ignorable="d"
+        Title="CompanyWindow" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ListBox x:Name="myList" >
+            <StackPanel Width="1201" HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Width="389" Height="178" Source="Resources/no2.png" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" />
+                    <TextBlock FontSize="16" Text="Название компании" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                    <TextBlock FontSize="16" Text="Продукты или товары производимые компанией" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" />
+                </Grid>
+            </StackPanel>
+        </ListBox>
+    </Grid>
+</Window>

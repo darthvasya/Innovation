@@ -31,32 +31,33 @@ namespace InnovationRepository
     {
         //List<string> phones;
 
-        public ObservableCollection<Phone> Phones { get; set; }
+        public ObservableCollection<InformationAboutCompany> Companys { get; set; }
         public MoreAboutCompanies()
         {
             InitializeComponent();
+            LoadList();
+        }
 
-            //Entities context = new Entities();
-
-            //phones = new List<string> { "iPhone 6S Plus", "Nexus 6P", "Galaxy S7 Edge12" };
-
-            //phonesList.ItemsSource = phones;
-            Phones = new ObservableCollection<Phone>
+        void LoadList()
+        {
+            Companys = new ObservableCollection<InformationAboutCompany>();
+            Entities context = new Entities();
+            var x = from p in context.InformationAboutCompanies select p;
+            foreach (var p in x)
             {
-                new Phone {Id=1, ImagePath="Resources/no2.png", Title="iPhone 6S", Company="Apple" },
-                new Phone {Id=2, ImagePath="Resources/no2.png", Title="Lumia 950", Company="Microsoft" },
-                new Phone {Id=3, ImagePath="Resources/no2.png", Title="Nexus 5X", Company="Google" },
-                new Phone {Id=4, ImagePath="Resources/no2.png", Title="Galaxy S6", Company="Samsung"}
-            };
-            myList.ItemsSource = Phones;
-
-
+                Companys.Add(p);
+            }
+            myList.ItemsSource = Companys;
+            
         }
 
         private void myList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Phone p = (Phone)myList.SelectedItem;
-            MessageBox.Show(p.Company);
+            InformationAboutCompany p = (InformationAboutCompany)myList.SelectedItem;
+            MyCompany.selectedCompany = p.ID_company;
+            CompanyWindow compWindow = new CompanyWindow();
+            compWindow.Show();
+
         }
     }
 }

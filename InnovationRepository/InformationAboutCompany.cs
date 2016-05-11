@@ -19,5 +19,16 @@ namespace InnovationRepository
         public string fieldActivity { get; set; }
         public string ware { get; set; }
         public string ownersheep { get; set; }
+        public string district { get; set; }
+        public string town { get; set; }
+        public string email { get; set; }
+        public string telephone { get; set; }
+        public Nullable<int> flat { get; set; }
+        public string house { get; set; }
+        public string street { get; set; }
+        public string secondName { get; set; }
+        public string surname { get; set; }
+        public string Expr1 { get; set; }
+        public int ID_company { get; set; }
     }
 }

@@ -3,29 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Collections.ObjectModel;
 
 namespace InnovationRepository
 {
     public class MyCompany : IObject
     {
-        protected string address;
-        protected string Name;
-        Entities context = new Entities();
+        Entities context;
+        public static int selectedCompany {get; set;}
 
-        public MyCompany(string _address, string _name)
+        public MyCompany()
         {
-            this.address = _address;
-            this.Name = _name;
+            try
+            {
+                context = new Entities();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public string errMessage{
            get { return "Error in MyCompany class"; }
         }
 
-        public string name
-        {
-            get { return Name; }
-        }
+ 
 
         public virtual void addNewItem()
         {
@@ -42,11 +45,15 @@ namespace InnovationRepository
             MessageBox.Show("getInformation");
         }
 
-        
-
-        public Company getCompany(int idCompany)
+        public InformationAboutCompany getCompany(int idCompany)
         {
-            return context.Companies.Find(idCompany); ;
+           
+            return context.InformationAboutCompanies.Find(idCompany); ;
         }
+
+        //public ObservableCollection<Company> getAllCompanies()
+        //{
+        //    return context.Companies;
+        //}
     }
 }

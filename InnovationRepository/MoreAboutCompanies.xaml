@@ -11,20 +11,26 @@
         <ListBox x:Name="myList" SelectionChanged="myList_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="5">
-                        <Image Width="100" Height="75" Source="Resources/no2.png" />
-                        <TextBlock FontSize="16" Text="{Binding Path=Title}" HorizontalAlignment="Center" />
-                        <TextBlock FontSize="16" Text="{Binding Path=Company}" HorizontalAlignment="Center" />
+
+                    <StackPanel Margin="5" HorizontalAlignment="Center" Width="1150">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Width="100" Height="75" Source="Resources/no2.png" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0"/>
+                            <TextBlock FontSize="16" Text="{Binding Path=name}" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0"/>
+                            <TextBlock FontSize="16" Text="{Binding Path=ware}" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="0"/>
+                        </Grid>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
-        <!--<ListBox x:Name="phonesList">
-            <ListBox.Items>
-                <Image x:Name="image" HorizontalAlignment="Left" Height="178" Margin="0,0,0,0" VerticalAlignment="Top" Width="163" Source="Resources/no2.png"/>
-            </ListBox.Items>
-        </ListBox>-->
 
 
 

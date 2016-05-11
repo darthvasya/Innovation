@@ -11,13 +11,9 @@ namespace InnovationRepository
         private Innovation InnovObject;
         private Company CompanyObject;
 
-        public CompanyInRealization(string _address, string _nameCompany, Innovation _innovationObject, Company _companyObject)
-            : base(_address, _nameCompany)
+        public CompanyInRealization()
         {
-            this.Name = _nameCompany;
-            this.address = _address;
-            this.InnovObject = _innovationObject;
-            this.CompanyObject = _companyObject;
+
         }
 
         public override void Edit()
