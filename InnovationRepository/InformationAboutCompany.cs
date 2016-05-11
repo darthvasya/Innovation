@@ -28,7 +28,7 @@ namespace InnovationRepository
         public string street { get; set; }
         public string secondName { get; set; }
         public string surname { get; set; }
-        public string Expr1 { get; set; }
         public int ID_company { get; set; }
+        public string uname { get; set; }
     }
 }

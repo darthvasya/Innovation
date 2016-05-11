@@ -357,7 +357,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutCompanies' do
             <PropertyRef Name="street" />
             <PropertyRef Name="secondName" />
             <PropertyRef Name="surname" />
-            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="uname" />
             <PropertyRef Name="ID company" />
           </Key>
           <Property Name="name" Type="ntext" Nullable="false" />
@@ -374,7 +374,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutCompanies' do
           <Property Name="street" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="secondName" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="surname" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="Expr1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="uname" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ID company" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -963,7 +963,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
     [InformationAboutCompanies].[street] AS [street], 
     [InformationAboutCompanies].[secondName] AS [secondName], 
     [InformationAboutCompanies].[surname] AS [surname], 
-    [InformationAboutCompanies].[Expr1] AS [Expr1], 
+    [InformationAboutCompanies].[uname] AS [uname], 
     [InformationAboutCompanies].[ID company] AS [ID company]
     FROM [dbo].[InformationAboutCompanies] AS [InformationAboutCompanies]</DefiningQuery>
           </EntitySet>
@@ -1562,8 +1562,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
             <PropertyRef Name="street" />
             <PropertyRef Name="secondName" />
             <PropertyRef Name="surname" />
-            <PropertyRef Name="Expr1" />
             <PropertyRef Name="ID_company" />
+            <PropertyRef Name="uname" />
           </Key>
           <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="branch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1579,8 +1579,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <Property Name="street" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="secondName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="surname" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Expr1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ID_company" Type="Int32" Nullable="false" />
+          <Property Name="uname" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
         </EntityType>
         <EntityType Name="InformationAboutRealization">
           <Key>
@@ -1588,7 +1588,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
             <PropertyRef Name="Name_of_Company" />
             <PropertyRef Name="Surname_Promouter" />
           </Key>
-          <Property Name="Name_of_Innovation_Product" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name_of_Innovation_Product" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" Type="String" />
           <Property Name="Name_of_Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="implementationState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Surname_Promouter" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
@@ -2687,8 +2687,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <EntitySetMapping Name="InformationAboutCompanies">
             <EntityTypeMapping TypeName="Model.InformationAboutCompany">
               <MappingFragment StoreEntitySet="InformationAboutCompanies">
+                <ScalarProperty Name="uname" ColumnName="uname" />
                 <ScalarProperty Name="ID_company" ColumnName="ID company" />
-                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
                 <ScalarProperty Name="surname" ColumnName="surname" />
                 <ScalarProperty Name="secondName" ColumnName="secondName" />
                 <ScalarProperty Name="street" ColumnName="street" />

@@ -7,22 +7,47 @@
         mc:Ignorable="d"
         Title="CompanyWindow" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ListBox x:Name="myList" >
-            <StackPanel Width="1201" HorizontalAlignment="Center">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Image Width="389" Height="178" Source="Resources/no2.png" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" />
-                    <TextBlock FontSize="16" Text="Название компании" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
-                    <TextBlock FontSize="16" Text="Продукты или товары производимые компанией" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" />
-                </Grid>
-            </StackPanel>
-        </ListBox>
+
+        <StackPanel Width="1192" HorizontalAlignment="Center" Margin="12,0">
+            <Grid Height="646">
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="277"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0">
+                    <Image Height="355" Source="Resources/no2.png"  VerticalAlignment="Top" Margin="0,10,10,0" HorizontalAlignment="Center" Width="390" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <TextBlock x:Name="nameCompany" FontSize="42" Text="Название компании" HorizontalAlignment="Center" />
+                    <TextBlock x:Name="branch" FontSize="28" Text="Branch" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock FontSize="32" Text="Адресс:"></TextBlock>
+                    <TextBlock x:Name="district" FontSize="28" Text=""></TextBlock>
+                    <TextBlock x:Name="town" FontSize="28" Text=""></TextBlock>
+                    <TextBlock x:Name="street" FontSize="28" Text=""></TextBlock>
+                    <TextBlock x:Name="house" FontSize="28" Text=""></TextBlock>
+                    <TextBlock x:Name="flat" FontSize="28" Text=""></TextBlock>
+                </StackPanel>
+                <StackPanel  Grid.Column="2" Grid.Row="0">
+                    <TextBlock FontSize="35" Text="Продукты и товары производимые компанией:" HorizontalAlignment="Center" TextWrapping="Wrap" Width="397"/>
+                    <TextBlock x:Name="ware" FontSize="26" TextWrapping="Wrap"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
+                    <TextBlock FontSize="38" Text="Контактная информация: "></TextBlock>
+                    <StackPanel Margin="120,20,0,0">
+                        <TextBlock x:Name="name" FontSize="35"></TextBlock>
+                        <TextBlock x:Name="email" FontSize="35"></TextBlock>
+                        <TextBlock x:Name="telephone" FontSize="35"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+
     </Grid>
 </Window>
