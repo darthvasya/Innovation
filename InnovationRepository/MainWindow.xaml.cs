@@ -63,5 +63,11 @@ namespace InnovationRepository
             MoreAboutCompanies macWindow = new MoreAboutCompanies();
             macWindow.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddCompanyWindow addCompanyWindow = new AddCompanyWindow();
+            addCompanyWindow.Show();
+        }
     }
 }

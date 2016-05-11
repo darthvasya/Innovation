@@ -25,7 +25,7 @@
         <Canvas Grid.Column="0" Grid.Row="0" Margin="0,3,0,0" Grid.RowSpan="2">
             <Label Canvas.Left="169" FontSize="32">Предприятия</Label>
             <Button Canvas.Left="10" Canvas.Top="58" Height="43" Width="125" FontSize="18" Click="Button_Click">Подробнее</Button>
-            <Button Canvas.Left="157" Canvas.Top="58" Height="43" Width="262" FontSize="18" Content="Добавить новое предприятие"/>
+            <Button Canvas.Left="157" Canvas.Top="58" Height="43" Width="262" FontSize="18" Content="Добавить новое предприятие" Click="Button_Click_1"/>
             <Button Canvas.Left="440" Canvas.Top="58" Height="43" Width="156" FontSize="18" Content="Редактировать"/>
             <StackPanel Height="51" Canvas.Left="10" Canvas.Top="150" Width="586" Background="#FF747474" >
                 <TextBlock x:Name="nameCompFirst" TextWrapping="Wrap" Text="Очень длинное название предприятия" FontSize="14" Margin="10,5,371,0" Height="40" Background="#FF4E8FEC" TextAlignment="Center" VerticalAlignment="Center"/>

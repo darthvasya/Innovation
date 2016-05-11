@@ -303,7 +303,7 @@
           <Key>
             <PropertyRef Name="ID town" />
           </Key>
-          <Property Name="ID town" Type="int" Nullable="false" />
+          <Property Name="ID town" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="town" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="worksheet">
