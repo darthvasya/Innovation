@@ -10,6 +10,7 @@ namespace InnovationRepository
     {
         protected string address;
         protected string Name;
+        Entities context = new Entities();
 
         public MyCompany(string _address, string _name)
         {
@@ -39,6 +40,13 @@ namespace InnovationRepository
         public virtual void getInformation()
         {
             MessageBox.Show("getInformation");
+        }
+
+        
+
+        public Company getCompany(int idCompany)
+        {
+            return context.Companies.Find(idCompany); ;
         }
     }
 }
