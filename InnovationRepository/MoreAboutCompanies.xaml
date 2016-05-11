@@ -7,21 +7,26 @@
         mc:Ignorable="d"
         Title="MoreAboutCompanies" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="328,112,0,0" VerticalAlignment="Top"/>
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="123*"/>
-            <ColumnDefinition Width="181*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="False" x:Name="companysGrid" Grid.ColumnSpan="2" SelectionChanged="companysGrid_SelectionChanged">
-            <DataGrid.Columns>
-                --><!--<DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="100"/>
-                <DataGridTextColumn Binding="{Binding Company}" Header="Производитель" Width="110"/>
-                <DataGridTextColumn Binding="{Binding Price}" Header="Цена" Width="70"/>--><!--
-            </DataGrid.Columns>
-        </DataGrid>-->
+
+        <ListBox x:Name="myList" SelectionChanged="myList_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <Image Width="100" Height="75" Source="Resources/no2.png" />
+                        <TextBlock FontSize="16" Text="{Binding Path=Title}" HorizontalAlignment="Center" />
+                        <TextBlock FontSize="16" Text="{Binding Path=Company}" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!--<ListBox x:Name="phonesList">
+            <ListBox.Items>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="178" Margin="0,0,0,0" VerticalAlignment="Top" Width="163" Source="Resources/no2.png"/>
+            </ListBox.Items>
+        </ListBox>-->
+
+
+
     </Grid>
 </Window>
