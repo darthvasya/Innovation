@@ -162,6 +162,58 @@ namespace InnovationRepository
             //end work with contact
 
 
+            //work with worksheet
+            worksheet myWorksheet = new worksheet();
+
+            if (wareBox.Text != "")
+                myWorksheet.ware = wareBox.Text.ToString();
+
+            try
+            {
+                int idSelectedBranch = context.Branches.Where(p => p.branch1 == branchBox.Text.ToString()).FirstOrDefault().ID_branch;
+                int idSelectedOwnersheep = context.Ownersheep.Where(p => p.ownersheep1 == ownersheepBox.Text.ToString()).FirstOrDefault().ID_ownersheep;
+                int idSelectedFieldActivity = context.FieldActivities.Where(p => p.fieldActivity1 == fieldhBox.Text.ToString()).FirstOrDefault().ID_fieldActivity;
+
+                myWorksheet.ID_branch = idSelectedBranch;
+                myWorksheet.ID_ownership = idSelectedOwnersheep;
+                myWorksheet.ID_fieldActivity = idSelectedFieldActivity;
+
+                context.worksheets.Add(myWorksheet);
+                context.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            //end work with worksheet
+
+
+            //work with company
+            int idAddedContact = context.contacts.Take(10000).AsEnumerable().Last().ID_contact;
+            int idAddedWorksheet = context.worksheets.Take(10000).AsEnumerable().Last().ID_worksheet;
+
+            Company myCompany = new Company();
+
+            if (nameBox.Text != null)
+                myCompany.name = nameBox.Text.ToString();
+
+            myCompany.ID_adress = idAddedAddress;
+            myCompany.ID_contact = idAddedContact;
+            myCompany.ID_worksheet = idAddedWorksheet;
+
+            try
+            {
+                context.Companies.Add(myCompany);
+                context.SaveChanges();
+                MessageBox.Show(myCompany.name.ToString() + " успешно добавлена!" );
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            //end work with company
+
         }
     }
 }
