@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="ID address" />
           </Key>
-          <Property Name="ID address" Type="int" Nullable="false" />
+          <Property Name="ID address" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID district" Type="int" Nullable="false" />
           <Property Name="ID town" Type="int" Nullable="false" />
           <Property Name="street" Type="varchar" MaxLength="50" Nullable="false" />
@@ -37,7 +37,7 @@
           <Key>
             <PropertyRef Name="ID branch" />
           </Key>
-          <Property Name="ID branch" Type="int" Nullable="false" />
+          <Property Name="ID branch" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="branch" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="causeOf">
@@ -81,21 +81,21 @@
           <Property Name="name" Type="ntext" Nullable="false" />
           <Property Name="ID adress" Type="int" Nullable="false" />
           <Property Name="ID contact" Type="int" Nullable="false" />
-          <Property Name="ID company" Type="int" Nullable="false" />
+          <Property Name="ID company" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID worksheet" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CompanyState">
           <Key>
             <PropertyRef Name="ID companyState" />
           </Key>
-          <Property Name="ID companyState" Type="int" Nullable="false" />
+          <Property Name="ID companyState" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="companyState" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="contacts">
           <Key>
             <PropertyRef Name="ID contact" />
           </Key>
-          <Property Name="ID contact" Type="int" Nullable="false" />
+          <Property Name="ID contact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="surname" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="secondName" Type="varchar" MaxLength="20" Nullable="false" />
@@ -133,7 +133,7 @@
           <Key>
             <PropertyRef Name="ID district" />
           </Key>
-          <Property Name="ID district" Type="int" Nullable="false" />
+          <Property Name="ID district" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="district" Type="varchar" MaxLength="25" Nullable="false" />
         </EntityType>
         <EntityType Name="expMarShare">
@@ -148,7 +148,7 @@
           <Key>
             <PropertyRef Name="ID fieldActivity" />
           </Key>
-          <Property Name="ID fieldActivity" Type="int" Nullable="false" />
+          <Property Name="ID fieldActivity" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fieldActivity" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="imactToEconomy">
@@ -229,7 +229,7 @@
           <Key>
             <PropertyRef Name="ID ownersheep" />
           </Key>
-          <Property Name="ID ownersheep" Type="int" Nullable="false" />
+          <Property Name="ID ownersheep" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ownersheep" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="PersonPost">
@@ -310,7 +310,7 @@
           <Key>
             <PropertyRef Name="ID worksheet" />
           </Key>
-          <Property Name="ID worksheet" Type="int" Nullable="false" />
+          <Property Name="ID worksheet" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID fieldActivity" Type="int" Nullable="false" />
           <Property Name="ID branch" Type="int" Nullable="false" />
           <Property Name="ID ownership" Type="int" Nullable="false" />

@@ -32,11 +32,136 @@ namespace InnovationRepository
             //addedTown.town1 = "Kopyls12";
             //context.towns.Add(addedTown);
             //context.SaveChanges();
-            List<town> myTowns = context.towns.ToList();
-            foreach (var town in myTowns)
+            //List<town> myTowns = context.towns.ToList();
+            //foreach (var town in myTowns)
+            //{
+            //    townBox.Items.Add(town.town1.ToString());
+            //}
+
+            List<Branch> branches = context.Branches.ToList();
+            List<Ownersheep> ownersheeps = context.Ownersheep.ToList();
+            List<FieldActivity> fieldActivity = context.FieldActivities.ToList();
+            List<district> districts = context.districts.ToList();
+            List<CompanyState> companyStates = context.CompanyStates.ToList();
+
+            foreach (var branch in branches)
+                branchBox.Items.Add(branch.branch1.ToString());
+            foreach (var ownersheep in ownersheeps)
+                ownersheepBox.Items.Add(ownersheep.ownersheep1.ToString());
+            foreach (var fieldActiv in fieldActivity)
+                fieldhBox.Items.Add(fieldActiv.fieldActivity1.ToString());
+            foreach (var district in districts)
+                districtBox.Items.Add(district.district1.ToString());
+            foreach (var state in companyStates)
+                stateBox.Items.Add(state.companyState1);
+
+        }
+
+        private void saveCompanyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            addItems();
+        }
+
+        void addItems()
+        {
+            //work with address
+            Address myAdress = new Address();
+           
+            //work with town
+            var town = context.towns.Where(p => p.town1 == townBox.Text.ToString()).FirstOrDefault();
+            
+            if (town != null)
             {
-                townBox.Items.Add(town.town1.ToString());
+                int indexOfSelectedTown = town.ID_town;
+                myAdress.ID_town = indexOfSelectedTown;
             }
+            else
+            {
+                town addedTown = new town();
+                addedTown.town1 = townBox.Text.ToString();
+                myAdress.town = addedTown;
+                context.towns.Add(addedTown);
+                context.SaveChanges();
+                int savedTownId = context.towns.Where(p => p.town1 == townBox.Text.ToString()).FirstOrDefault().ID_town;
+                myAdress.ID_town = savedTownId;
+            }
+            //end work with town
+
+            //work with district
+            if (districtBox.Text != null)
+            {
+                int selectedDistrictIndex = context.districts.Where(p => p.district1 == districtBox.Text.ToString()).FirstOrDefault().ID_district;
+                myAdress.ID_district = selectedDistrictIndex;
+                //district distr = new district();
+                //distr.district1 = districtBox.Text.ToString();
+                //myAdress.district = distr;
+            }
+            //end work with district
+
+            //work with street, house, flat
+            if (streetBox.Text != null)
+            {
+                myAdress.street = streetBox.Text.ToString();
+            }
+            if (houseBox.Text != "")
+            {
+                myAdress.house = houseBox.Text.ToString();
+            }
+            if (flatBox.Text != "")
+            {
+                myAdress.flat = Convert.ToInt32(flatBox.Text);
+            }
+
+            //get last added address id for ad to contact table
+
+
+            int idAddedAddress = 0;
+            try
+            {
+                context.Addresses.Add(myAdress);
+                context.SaveChanges();
+                idAddedAddress = context.Addresses.Take(10000).AsEnumerable().Last().ID_address;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            //end work with street, house, flat
+            //end work with address
+
+            //work with contact
+            contact myContact = new contact();
+
+            int idSelectedCompanyState = context.CompanyStates.Where(p => p.companyState1 == stateBox.Text.ToString()).FirstOrDefault().ID_companyState;
+            myContact.ID_CompanyState = idSelectedCompanyState;
+            myContact.ID_PersonStatus = 1;
+
+            if (unameBox.Text != null)
+                myContact.name = unameBox.Text.ToString();
+            if (surnameBox.Text != null)
+                myContact.surname = surnameBox.Text.ToString();
+            if (secondnameBox.Text != null)
+                myContact.secondName = secondnameBox.Text.ToString();
+            if (telephoneBox.Text != null)
+                myContact.telephone = telephoneBox.Text.ToString();
+            if (emailBox.Text != null)
+                myContact.email = emailBox.Text.ToString();
+            
+
+            try
+            {
+                myContact.ID_address = idAddedAddress;
+                context.contacts.Add(myContact);
+                context.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            //end work with contact
+
+
         }
     }
 }
