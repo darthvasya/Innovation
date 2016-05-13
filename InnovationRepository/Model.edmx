@@ -378,6 +378,40 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutCompanies' do
           <Property Name="ID company" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutInnovations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="InformationAboutInnovations">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="ID innovation" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="Expr2" />
+            <PropertyRef Name="Expr3" />
+            <PropertyRef Name="Expr4" />
+            <PropertyRef Name="Expr5" />
+            <PropertyRef Name="Expr6" />
+            <PropertyRef Name="Expr7" />
+            <PropertyRef Name="Expr8" />
+            <PropertyRef Name="Expr9" />
+            <PropertyRef Name="Expr10" />
+            <PropertyRef Name="Expr11" />
+            <PropertyRef Name="Expr12" />
+          </Key>
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="ID innovation" Type="int" Nullable="false" />
+          <Property Name="Expr1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr4" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr6" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr7" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr8" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr9" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr10" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr11" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Expr12" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="InformationAboutRealization">
           <Key>
@@ -966,6 +1000,24 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
     [InformationAboutCompanies].[uname] AS [uname], 
     [InformationAboutCompanies].[ID company] AS [ID company]
     FROM [dbo].[InformationAboutCompanies] AS [InformationAboutCompanies]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="InformationAboutInnovations" EntityType="Self.InformationAboutInnovations" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [InformationAboutInnovations].[Name] AS [Name], 
+    [InformationAboutInnovations].[ID innovation] AS [ID innovation], 
+    [InformationAboutInnovations].[Expr1] AS [Expr1], 
+    [InformationAboutInnovations].[Expr2] AS [Expr2], 
+    [InformationAboutInnovations].[Expr3] AS [Expr3], 
+    [InformationAboutInnovations].[Expr4] AS [Expr4], 
+    [InformationAboutInnovations].[Expr5] AS [Expr5], 
+    [InformationAboutInnovations].[Expr6] AS [Expr6], 
+    [InformationAboutInnovations].[Expr7] AS [Expr7], 
+    [InformationAboutInnovations].[Expr8] AS [Expr8], 
+    [InformationAboutInnovations].[Expr9] AS [Expr9], 
+    [InformationAboutInnovations].[Expr10] AS [Expr10], 
+    [InformationAboutInnovations].[Expr11] AS [Expr11], 
+    [InformationAboutInnovations].[Expr12] AS [Expr12]
+    FROM [dbo].[InformationAboutInnovations] AS [InformationAboutInnovations]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="InformationAboutRealization" EntityType="Self.InformationAboutRealization" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -2292,6 +2344,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="InformationAboutInnovations" EntityType="Model.InformationAboutInnovation" />
         </EntityContainer>
         <ComplexType Name="InnovationAfterDate_Result">
           <Property Type="String" Name="Name" Nullable="false" />
@@ -2314,6 +2367,38 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="InformationAboutInnovation">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="ID_innovation" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="Expr2" />
+            <PropertyRef Name="Expr3" />
+            <PropertyRef Name="Expr4" />
+            <PropertyRef Name="Expr5" />
+            <PropertyRef Name="Expr6" />
+            <PropertyRef Name="Expr7" />
+            <PropertyRef Name="Expr8" />
+            <PropertyRef Name="Expr9" />
+            <PropertyRef Name="Expr10" />
+            <PropertyRef Name="Expr11" />
+            <PropertyRef Name="Expr12" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ID_innovation" Type="Int32" Nullable="false" />
+          <Property Name="Expr1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr3" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr4" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr5" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr6" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr7" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr8" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr9" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr10" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr11" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr12" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2758,6 +2843,26 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Model.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Model.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="InformationAboutInnovations">
+            <EntityTypeMapping TypeName="Model.InformationAboutInnovation">
+              <MappingFragment StoreEntitySet="InformationAboutInnovations">
+                <ScalarProperty Name="Expr12" ColumnName="Expr12" />
+                <ScalarProperty Name="Expr11" ColumnName="Expr11" />
+                <ScalarProperty Name="Expr10" ColumnName="Expr10" />
+                <ScalarProperty Name="Expr9" ColumnName="Expr9" />
+                <ScalarProperty Name="Expr8" ColumnName="Expr8" />
+                <ScalarProperty Name="Expr7" ColumnName="Expr7" />
+                <ScalarProperty Name="Expr6" ColumnName="Expr6" />
+                <ScalarProperty Name="Expr5" ColumnName="Expr5" />
+                <ScalarProperty Name="Expr4" ColumnName="Expr4" />
+                <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+                <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="ID_innovation" ColumnName="ID innovation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

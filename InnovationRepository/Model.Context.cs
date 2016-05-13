@@ -65,6 +65,7 @@ namespace InnovationRepository
         public virtual DbSet<InformationAboutAuthor> InformationAboutAuthors { get; set; }
         public virtual DbSet<InformationAboutCompany> InformationAboutCompanies { get; set; }
         public virtual DbSet<InformationAboutRealization> InformationAboutRealizations { get; set; }
+        public virtual DbSet<InformationAboutInnovation> InformationAboutInnovations { get; set; }
     
         public virtual ObjectResult<InnovationAfterDate_Result> InnovationAfterDate(Nullable<System.DateTime> date)
         {

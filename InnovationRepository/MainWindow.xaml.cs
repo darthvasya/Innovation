@@ -49,7 +49,15 @@ namespace InnovationRepository
                 wareCompSecond.Text = comp[1].ware;
                 wareCompThird.Text = comp[2].ware;
 
+                int countInnov = context.InformationAboutInnovations.Count();
+                int countStrateg = context.InformationAboutInnovations.Count(p => p.Expr6 == "стратегический");
+                int countLocal = context.InformationAboutInnovations.Count(p => p.Expr6 == "локальный");
+                int countSys = context.InformationAboutInnovations.Count(p => p.Expr6 == "системный");
 
+                countInnovLabel.Content = countInnov.ToString();
+                strategCount.Content = countStrateg.ToString();
+                localCount.Content = countLocal.ToString();
+                systCount.Content = countSys.ToString();
 
             }
             catch(Exception ex)

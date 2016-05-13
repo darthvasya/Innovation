@@ -14,19 +14,18 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="351*"></RowDefinition>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="298*"></RowDefinition>
         </Grid.RowDefinitions>
         <GridSplitter Grid.Column="1"  Grid.Row="0" ShowsPreview="False" Width="3"
         HorizontalAlignment="Center" VerticalAlignment="Stretch" />
-        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="3"
-        HorizontalAlignment="Stretch" VerticalAlignment="Center" />
-        <Canvas Grid.Column="0" Grid.Row="0" Margin="0,3,0,0" Grid.RowSpan="2">
+        <GridSplitter Grid.Row="2" Grid.ColumnSpan="3" Height="4"
+        HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,5,0,289" />
+        <Canvas Grid.Column="0" Grid.Row="0" Margin="0,3,0,0">
             <Label Canvas.Left="169" FontSize="32">Предприятия</Label>
-            <Button Canvas.Left="10" Canvas.Top="58" Height="43" Width="125" FontSize="18" Click="Button_Click">Подробнее</Button>
-            <Button Canvas.Left="157" Canvas.Top="58" Height="43" Width="262" FontSize="18" Content="Добавить новое предприятие" Click="Button_Click_1"/>
-            <Button Canvas.Left="440" Canvas.Top="58" Height="43" Width="156" FontSize="18" Content="Редактировать"/>
+            <Button Canvas.Left="54" Canvas.Top="53" Height="43" Width="161" FontSize="18" Click="Button_Click">Подробнее</Button>
+            <Button Canvas.Left="287" Canvas.Top="53" Height="43" Width="291" FontSize="18" Content="Добавить новое предприятие" Click="Button_Click_1"/>
             <StackPanel Height="51" Canvas.Left="10" Canvas.Top="150" Width="586" Background="#FF747474" >
                 <TextBlock x:Name="nameCompFirst" TextWrapping="Wrap" Text="Очень длинное название предприятия" FontSize="14" Margin="10,5,371,0" Height="40" Background="#FF4E8FEC" TextAlignment="Center" VerticalAlignment="Center"/>
                 <TextBlock x:Name="branchCompFirst" TextWrapping="Wrap" Text="Сельское хозяйство" FontSize="14" Margin="232,-40,195,0" Height="40" Background="#FF9B9B9B" TextAlignment="Center" VerticalAlignment="Center"/>
@@ -55,7 +54,18 @@
 
         </Canvas>
         <Canvas Grid.Column="2" Grid.Row="0" Background="LightGreen">
-            <TextBlock>Правая панель</TextBlock>
+            <Label x:Name="label1" Content="Инновационные продукты" Canvas.Left="130" Height="58" Width="407" FontSize="32"/>
+            <Button x:Name="buttonMoreAboutInnovation" Content="Подробнее" Canvas.Left="55" Canvas.Top="58" Width="189" Height="38" FontSize="18"/>
+            <Button x:Name="buttonAddInnovation" Content="Добавить новый продукт" Canvas.Left="334" Canvas.Top="63" Width="250" Height="38" FontSize="18"/>
+            <Label x:Name="moment" FontSize="24" Canvas.Top="127" Canvas.Left="10">На данный момент зарегистрированно:</Label>
+            <Label x:Name="countInnovLabel" FontSize="24" Canvas.Top="127" Canvas.Left="480">n</Label>
+            <Label x:Name="expected" FontSize="24" Canvas.Top="174" Canvas.Left="10">По ожидаемому охвату доли рынка:</Label>
+            <Label x:Name="strateg" FontSize="24" Canvas.Top="299" Canvas.Left="10">Стратегических:</Label>
+            <Label x:Name="syst" FontSize="24" Canvas.Top="258" Canvas.Left="60">Системных:</Label>
+            <Label x:Name="local" FontSize="24" Canvas.Top="216" Canvas.Left="60">Локальных:</Label>
+            <Label x:Name="strategCount" FontSize="24" Canvas.Top="299" Canvas.Left="237">n</Label>
+            <Label x:Name="localCount" FontSize="24" Canvas.Top="216" Canvas.Left="237">n</Label>
+            <Label x:Name="systCount" FontSize="24" Canvas.Top="258" Canvas.Left="237">n</Label>
         </Canvas>
         <Canvas Grid.ColumnSpan="3" Grid.Row="2" Background="#dfffff">
             <TextBlock Canvas.Left="60">Нижняя панель</TextBlock>

@@ -82,6 +82,7 @@
         <AssociationConnector Association="Model.FK_Sertification_License" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_worksheet_Ownersheep" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_PersonStatus_PersonPost" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.InformationAboutInnovation" Width="1.5" PointX="10.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
