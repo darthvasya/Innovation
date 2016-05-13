@@ -55,7 +55,7 @@
         </Canvas>
         <Canvas Grid.Column="2" Grid.Row="0" Background="LightGreen">
             <Label x:Name="label1" Content="Инновационные продукты" Canvas.Left="130" Height="58" Width="407" FontSize="32"/>
-            <Button x:Name="buttonMoreAboutInnovation" Content="Подробнее" Canvas.Left="55" Canvas.Top="58" Width="189" Height="38" FontSize="18"/>
+            <Button x:Name="buttonMoreAboutInnovation" Content="Подробнее" Canvas.Left="55" Canvas.Top="58" Width="189" Height="38" FontSize="18" Click="buttonMoreAboutInnovation_Click"/>
             <Button x:Name="buttonAddInnovation" Content="Добавить новый продукт" Canvas.Left="334" Canvas.Top="63" Width="250" Height="38" FontSize="18"/>
             <Label x:Name="moment" FontSize="24" Canvas.Top="127" Canvas.Left="10">На данный момент зарегистрированно:</Label>
             <Label x:Name="countInnovLabel" FontSize="24" Canvas.Top="127" Canvas.Left="480">n</Label>

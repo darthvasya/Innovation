@@ -28,5 +28,7 @@ namespace InnovationRepository
         public string Expr10 { get; set; }
         public string Expr11 { get; set; }
         public string Expr12 { get; set; }
+        public int ID_contactOwner { get; set; }
+        public int ID_contactAuthor { get; set; }
     }
 }

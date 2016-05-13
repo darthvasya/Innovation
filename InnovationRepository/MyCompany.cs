@@ -11,6 +11,7 @@ namespace InnovationRepository
     {
         Entities context;
         public static int selectedCompany {get; set;}
+        public static int selectedInnovation { get; set; }
 
         public MyCompany()
         {

@@ -19,13 +19,7 @@ namespace InnovationRepository
     /// Interaction logic for MoreAboutCompanies.xaml
     /// </summary>
 
-    public class Phone
-    {
-        public int Id { get; set; }
-        public string Title { get; set; } // модель телефона
-        public string Company { get; set; } // производитель
-        public string ImagePath { get; set; } // путь к изображению
-    }
+ 
     
     public partial class MoreAboutCompanies : Window
     {

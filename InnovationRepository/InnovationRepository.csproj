@@ -151,6 +151,9 @@
     <Compile Include="InnovationAfterDate_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="InnovationWindow.xaml.cs">
+      <DependentUpon>InnovationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="innovationWorksheet.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -168,6 +171,9 @@
     </Compile>
     <Compile Include="MoreAboutCompanies.xaml.cs">
       <DependentUpon>MoreAboutCompanies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoreAboutInnovationWindow.xaml.cs">
+      <DependentUpon>MoreAboutInnovationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyCompany.cs" />
     <Compile Include="Ownersheep.cs">
@@ -220,6 +226,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InnovationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -233,6 +243,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MoreAboutCompanies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoreAboutInnovationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

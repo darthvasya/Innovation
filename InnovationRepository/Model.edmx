@@ -395,6 +395,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutInnovations' 
             <PropertyRef Name="Expr10" />
             <PropertyRef Name="Expr11" />
             <PropertyRef Name="Expr12" />
+            <PropertyRef Name="ID contactOwner" />
+            <PropertyRef Name="ID contactAuthor" />
           </Key>
           <Property Name="Name" Type="varchar(max)" Nullable="false" />
           <Property Name="ID innovation" Type="int" Nullable="false" />
@@ -410,6 +412,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutInnovations' 
           <Property Name="Expr10" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Expr11" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Expr12" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID contactOwner" Type="int" Nullable="false" />
+          <Property Name="ID contactAuthor" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1016,7 +1020,9 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
     [InformationAboutInnovations].[Expr9] AS [Expr9], 
     [InformationAboutInnovations].[Expr10] AS [Expr10], 
     [InformationAboutInnovations].[Expr11] AS [Expr11], 
-    [InformationAboutInnovations].[Expr12] AS [Expr12]
+    [InformationAboutInnovations].[Expr12] AS [Expr12], 
+    [InformationAboutInnovations].[ID contactOwner] AS [ID contactOwner], 
+    [InformationAboutInnovations].[ID contactAuthor] AS [ID contactAuthor]
     FROM [dbo].[InformationAboutInnovations] AS [InformationAboutInnovations]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="InformationAboutRealization" EntityType="Self.InformationAboutRealization" store:Type="Views" store:Schema="dbo">
@@ -2383,6 +2389,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
             <PropertyRef Name="Expr10" />
             <PropertyRef Name="Expr11" />
             <PropertyRef Name="Expr12" />
+            <PropertyRef Name="ID_contactOwner" />
+            <PropertyRef Name="ID_contactAuthor" />
           </Key>
           <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ID_innovation" Type="Int32" Nullable="false" />
@@ -2398,6 +2406,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <Property Name="Expr10" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Expr11" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Expr12" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ID_contactOwner" Type="Int32" Nullable="false" />
+          <Property Name="ID_contactAuthor" Type="Int32" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2846,6 +2856,8 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <EntitySetMapping Name="InformationAboutInnovations">
             <EntityTypeMapping TypeName="Model.InformationAboutInnovation">
               <MappingFragment StoreEntitySet="InformationAboutInnovations">
+                <ScalarProperty Name="ID_contactAuthor" ColumnName="ID contactAuthor" />
+                <ScalarProperty Name="ID_contactOwner" ColumnName="ID contactOwner" />
                 <ScalarProperty Name="Expr12" ColumnName="Expr12" />
                 <ScalarProperty Name="Expr11" ColumnName="Expr11" />
                 <ScalarProperty Name="Expr10" ColumnName="Expr10" />

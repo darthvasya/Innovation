@@ -1,0 +1,74 @@
+﻿<Window x:Class="InnovationRepository.InnovationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InnovationRepository"
+        mc:Ignorable="d"
+        Title="InnovationWindow" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <StackPanel Width="1192" HorizontalAlignment="Center" Margin="12,0">
+            <Grid Height="646">
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="237"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="397*"></ColumnDefinition>
+                    <ColumnDefinition Width="795*"></ColumnDefinition>
+                    <ColumnDefinition Width="0*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0">
+                    <Image Height="355" Source="Resources/no2.png"  VerticalAlignment="Top" Margin="0,10,10,0" HorizontalAlignment="Center" Width="390" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <TextBlock x:Name="nameInnovation" FontSize="42" Text="Название инновации" HorizontalAlignment="Center" />
+                    <TextBlock x:Name="classification" FontSize="28" Text="Классификация:" HorizontalAlignment="Center"></TextBlock>
+                     
+                    <TextBlock x:Name="Expr1" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr2" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr3" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr4" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr5" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr6" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr7" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr8" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr9" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr10" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr11" FontSize="18" Text=""></TextBlock>
+                    <TextBlock x:Name="Expr12" FontSize="18" Text=""></TextBlock>
+                </StackPanel>
+                <!--<StackPanel  Grid.Column="2" Grid.Row="0">
+                    <TextBlock FontSize="35" Text="Продукты и товары производимые компанией:" HorizontalAlignment="Center" TextWrapping="Wrap" Width="397"/>
+                    <TextBlock x:Name="ware" FontSize="26" TextWrapping="Wrap"></TextBlock>
+                </StackPanel>-->
+
+                <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Grid Height="239">
+                        <Grid.RowDefinitions>
+                            <RowDefinition ></RowDefinition>
+                           
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="620*"></ColumnDefinition>
+                            <ColumnDefinition Width="620*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Margin="0,00,0,0" Grid.Row="0" Grid.Column="0">
+                            <TextBlock FontSize="38" Text="Контактная информация разработчика: " TextWrapping="Wrap"></TextBlock>
+                            <TextBlock x:Name="dName" FontSize="35"></TextBlock>
+                            <TextBlock x:Name="dSurname" FontSize="35"></TextBlock>
+                            <TextBlock x:Name="dtelephone" FontSize="35"></TextBlock>
+                            <TextBlock x:Name="demail" FontSize="35"></TextBlock>
+                        </StackPanel>
+                        
+                    </Grid>
+
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

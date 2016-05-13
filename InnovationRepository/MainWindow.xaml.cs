@@ -77,5 +77,11 @@ namespace InnovationRepository
             AddCompanyWindow addCompanyWindow = new AddCompanyWindow();
             addCompanyWindow.Show();
         }
+
+        private void buttonMoreAboutInnovation_Click(object sender, RoutedEventArgs e)
+        {
+            MoreAboutInnovationWindow moreInnovWindow = new MoreAboutInnovationWindow();
+            moreInnovWindow.Show();
+        }
     }
 }
