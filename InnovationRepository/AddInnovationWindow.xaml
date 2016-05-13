@@ -1,0 +1,120 @@
+﻿<Window x:Class="InnovationRepository.AddInnovationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InnovationRepository"
+        mc:Ignorable="d"
+        Title="AddInnovationWindow" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label  x:Name="nameLabel" Content="Название:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="30" Margin="109,54,0,0" TextWrapping="Wrap" Text="Названиеинновации" VerticalAlignment="Top" Width="258"/>
+        <Label  x:Name="stateLabel" Content="Статус:" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
+        <ComboBox x:Name="stateBox" HorizontalAlignment="Left" Margin="109,106,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
+        <Label  x:Name="descriptionLabel" Content="Описание: " HorizontalAlignment="Left" Margin="372,50,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
+        <RichTextBox x:Name="descriptionBox" HorizontalAlignment="Left" Height="92" Margin="488,54,0,0" VerticalAlignment="Top" Width="258">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ComboBox x:Name="authorBox" HorizontalAlignment="Left" Margin="942,50,0,0" VerticalAlignment="Top" Width="258" Height="36"   SelectedIndex="0"/>
+        <ComboBox x:Name="ownerBox" HorizontalAlignment="Left" Margin="942,104,0,0" VerticalAlignment="Top" Width="258" Height="36"   SelectedIndex="0"/>
+        <Label  x:Name="authorLabel" Content="Автор: " HorizontalAlignment="Left" Margin="792,52,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
+        <Label  x:Name="ownerLabel" Content="Владелец: " HorizontalAlignment="Left" Margin="770,104,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
+        <GroupBox x:Name="groupBox1" Header="По причине возникновения:" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="66" Width="201">
+            <StackPanel x:Name="Expr1Box">
+                <RadioButton GroupName="Expr1" Content="стратегический" IsChecked="True" />
+                <RadioButton GroupName="Expr1" Content="реактивный" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox2" Header="По области применения:" HorizontalAlignment="Left" Margin="21,255,0,0" VerticalAlignment="Top" Height="145" Width="201">
+            <StackPanel x:Name="Expr2Box">
+                <RadioButton GroupName="Expr2" Content="технологические" IsChecked="True" />
+                <RadioButton GroupName="Expr2" Content="организационно-управленческий" />
+                <RadioButton GroupName="Expr2" Content="экономический" />
+                <RadioButton GroupName="Expr2" Content="маркетинговый" />
+                <RadioButton GroupName="Expr2" Content="социальный" />
+                <RadioButton GroupName="Expr2" Content="экологический" />
+                <RadioButton GroupName="Expr2" Content="информационный" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox3" Header="По характеру удовлетворяемых потребностей:" HorizontalAlignment="Left" Margin="20,535,0,0" VerticalAlignment="Top" Height="82" Width="281">
+            <StackPanel x:Name="Expr3Box">
+                <RadioButton GroupName="Expr3" Content="создающий новые потребности" IsChecked="True" Checked="RadioButton_Checked" />
+                <RadioButton GroupName="Expr3" Content="удовлетворяющий иным способом" />
+                <RadioButton GroupName="Expr3" Content="более эффективно удовлетворяющее" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox4" Header="По преемственности:" HorizontalAlignment="Left" Margin="244,196,0,0" VerticalAlignment="Top" Height="112" Width="202">
+            <StackPanel x:Name="Expr4Box">
+                <RadioButton GroupName="Expr4" Content="замещающее" IsChecked="True" />
+                <RadioButton GroupName="Expr4" Content="отменяющее" />
+                <RadioButton GroupName="Expr4" Content="возвратное" />
+                <RadioButton GroupName="Expr4" Content="открывающее" />
+                <RadioButton GroupName="Expr4" Content="ретровведение" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox5" Header="По степени новизны для рынка:" HorizontalAlignment="Left" Margin="20,415,0,0" VerticalAlignment="Top" Height="112" Width="202">
+            <StackPanel x:Name="Expr5Box">
+                <RadioButton GroupName="Expr5" Content="новое для отрасли в мире" IsChecked="True" />
+                <RadioButton GroupName="Expr5" Content="новое для отрасли в стране" />
+                <RadioButton GroupName="Expr5" Content="новое для данного предприятия" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox6" Header="По ожидаемому охвату доли рынка:" HorizontalAlignment="Left" Margin="244,415,0,0" VerticalAlignment="Top" Height="112" Width="219">
+            <StackPanel x:Name="Expr6Box">
+                <RadioButton GroupName="Expr6" Content="локальный" IsChecked="True" />
+                <RadioButton GroupName="Expr6" Content="системный" Checked="RadioButton_Checked_1" />
+                <RadioButton GroupName="Expr6" Content="стратегический" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox7" Header="По уровню воздействия на факторы производства:" HorizontalAlignment="Left" Margin="474,205,0,0" VerticalAlignment="Top" Height="112" Width="307">
+            <StackPanel x:Name="Expr7Box">
+                <RadioButton GroupName="Expr7" Content="комплексный" IsChecked="True" />
+                <RadioButton GroupName="Expr7" Content="локальный" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox8" Header="По уровню воздействия на факторы экономики:" HorizontalAlignment="Left" Margin="474,331,0,0" VerticalAlignment="Top" Height="112" Width="293">
+            <StackPanel x:Name="Expr8Box">
+                <RadioButton GroupName="Expr8" Content="базовое" IsChecked="True" />
+                <RadioButton GroupName="Expr8" Content="улучшающее" />
+                <RadioButton GroupName="Expr8" Content="псевдоинновация" Margin="0,0,10,0" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox9" Header="По степени новизны и инновационному потенциалу:" HorizontalAlignment="Left" Margin="474,448,0,0" VerticalAlignment="Top" Height="70" Width="319">
+            <StackPanel x:Name="Expr9Box">
+                <RadioButton GroupName="Expr9" Content="радикальная" IsChecked="True" />
+                <RadioButton GroupName="Expr9" Content="комбинаторная" />
+                <RadioButton GroupName="Expr9" Content="совершенствующаяся" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox10" Header="По месту в производственном цикле:" HorizontalAlignment="Left" Margin="809,205,0,0" VerticalAlignment="Top" Height="77" Width="254">
+            <StackPanel x:Name="Expr10Box" Margin="0,0,43,0">
+                <RadioButton GroupName="Expr10" Content="сырьевое" IsChecked="True" />
+                <RadioButton GroupName="Expr10" Content="обеспечивающее" />
+                <RadioButton GroupName="Expr10" Content="продуктовое" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox11" Header="По уровню воздействия на процесс производства:" HorizontalAlignment="Left" Margin="809,296,0,0" VerticalAlignment="Top" Height="83" Width="304">
+            <StackPanel x:Name="Expr11Box" Margin="0,0,109,0">
+                <RadioButton GroupName="Expr11" Content="расширяющий" IsChecked="True" />
+                <RadioButton GroupName="Expr11" Content="заменяющий" />
+                <RadioButton GroupName="Expr11" Content="улучшающий" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox12" Header="По распространенности:" HorizontalAlignment="Left" Margin="246,317,0,0" VerticalAlignment="Top" Height="62" Width="200">
+            <StackPanel x:Name="Expr12Box">
+                <RadioButton GroupName="Expr12" Content="еденичные" IsChecked="True" />
+                <RadioButton GroupName="Expr12" Content="диффузные" />
+            </StackPanel>
+        </GroupBox>
+
+
+
+        <Button x:Name="addContactBtn" Content="Добавить контакт" HorizontalAlignment="Left" Margin="653,565,0,0" VerticalAlignment="Top" Width="160" Height="52" Click="addContactBtn_Click"/>
+        <Button x:Name="addInnovationBtn" Content="Добавить инновацию" HorizontalAlignment="Left" Margin="891,570,0,0" VerticalAlignment="Top" Width="160" Height="52" Click="addInnovationBtn_Click"/>
+
+    </Grid>
+</Window>

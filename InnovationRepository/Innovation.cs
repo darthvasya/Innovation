@@ -31,6 +31,7 @@ namespace InnovationRepository
         public System.DateTime registrationDate { get; set; }
         public Nullable<System.DateTime> lastUpdate { get; set; }
         public int ID_classification { get; set; }
+        public string description { get; set; }
     
         public virtual Classification Classification { get; set; }
         public virtual contact contact { get; set; }

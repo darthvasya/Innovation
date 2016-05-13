@@ -33,7 +33,7 @@ namespace InnovationRepository
             var innovationInfo = context.InformationAboutInnovations.Where(p => p.ID_innovation == MyCompany.selectedInnovation).FirstOrDefault();
             nameInnovation.Text = innovationInfo.Name.ToString().ToUpper();
             Expr1.Text = "По причине возникновения: " + innovationInfo.Expr1.ToString().ToUpper();
-            Expr2.Text = "По области применения:: " + innovationInfo.Expr2.ToString().ToUpper();
+            Expr2.Text = "По области применения: " + innovationInfo.Expr2.ToString().ToUpper();
             Expr3.Text = "По характеру удовлетворяемых потребностей: " + innovationInfo.Expr3.ToString().ToUpper();
             Expr4.Text = "По преемственности: " + innovationInfo.Expr4.ToString().ToUpper();
             Expr5.Text = "По степени новизны для рынка: " + innovationInfo.Expr5.ToString().ToUpper();
@@ -47,7 +47,22 @@ namespace InnovationRepository
 
             int idAuthor = innovationInfo.ID_contactAuthor;
             int idOwner = innovationInfo.ID_contactOwner;
-            
+
+            var author = context.contacts.Where(p => p.ID_contact == idAuthor).FirstOrDefault();
+            var owner = context.contacts.Where(p => p.ID_contact == idOwner).FirstOrDefault();
+
+            dName.Text = author.name.ToString() + " " + author.surname.ToString();
+            if (author.telephone != null)
+                dtelephone.Text = "Телефон: " + author.telephone.ToString();
+            if(author.email != null)
+                demail.Text = "Email: " + author.email.ToString();
+
+            oName.Text = author.name.ToString() + " " + owner.surname.ToString();
+            if (owner.telephone != null)
+                otelephone.Text = "Телефон: " + owner.telephone.ToString();
+            if (owner.email != null)
+                oemail.Text = "Email: " + owner.email.ToString();
+
         }
     }
 }

@@ -83,5 +83,11 @@ namespace InnovationRepository
             MoreAboutInnovationWindow moreInnovWindow = new MoreAboutInnovationWindow();
             moreInnovWindow.Show();
         }
+
+        private void buttonAddInnovation_Click(object sender, RoutedEventArgs e)
+        {
+            AddInnovationWindow addInnovationWindow = new AddInnovationWindow();
+            addInnovationWindow.Show();
+        }
     }
 }

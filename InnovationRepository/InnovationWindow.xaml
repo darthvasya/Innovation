@@ -55,14 +55,19 @@
                             <ColumnDefinition Width="620*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel Margin="0,00,0,0" Grid.Row="0" Grid.Column="0">
-                            <TextBlock FontSize="38" Text="Контактная информация разработчика: " TextWrapping="Wrap"></TextBlock>
-                            <TextBlock x:Name="dName" FontSize="35"></TextBlock>
-                            <TextBlock x:Name="dSurname" FontSize="35"></TextBlock>
-                            <TextBlock x:Name="dtelephone" FontSize="35"></TextBlock>
-                            <TextBlock x:Name="demail" FontSize="35"></TextBlock>
+                        <StackPanel Margin="10,0,0,0" Grid.Row="0" Grid.Column="0">
+                            <TextBlock FontSize="35" Text="Контактная информация разработчика: " TextWrapping="Wrap"></TextBlock>
+                            <TextBlock x:Name="dName" FontSize="28"></TextBlock>
+                            <TextBlock x:Name="dtelephone" FontSize="28"></TextBlock>
+                            <TextBlock x:Name="demail" FontSize="28"></TextBlock>
                         </StackPanel>
-                        
+                        <StackPanel Margin="10,0,0,0" Grid.Row="0" Grid.Column="1">
+                            <TextBlock FontSize="35" Text="Контактная информация владельца: " TextWrapping="Wrap"></TextBlock>
+                            <TextBlock x:Name="oName" FontSize="28"></TextBlock>
+                            <TextBlock x:Name="otelephone" FontSize="28"></TextBlock>
+                            <TextBlock x:Name="oemail" FontSize="28"></TextBlock>
+                        </StackPanel>
+
                     </Grid>
 
                 </StackPanel>

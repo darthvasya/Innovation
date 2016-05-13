@@ -197,6 +197,7 @@
           <Property Name="registrationDate" Type="datetime" StoreGeneratedPattern="Computed" Nullable="false" />
           <Property Name="lastUpdate" Type="datetime" />
           <Property Name="ID classification" Type="int" Nullable="false" />
+          <Property Name="description" Type="text" />
         </EntityType>
         <EntityType Name="innovationWorksheet">
           <Key>
@@ -1439,6 +1440,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <NavigationProperty Name="Sertification" Relationship="Self.FK_Innovation_Sertification" FromRole="Innovation" ToRole="Sertification" />
           <NavigationProperty Name="StatesInnovation" Relationship="Self.FK_Innovation_StatesInnovation" FromRole="Innovation" ToRole="StatesInnovation" />
           <NavigationProperty Name="realizations" Relationship="Self.FK_realization_Innovation" FromRole="Innovation" ToRole="realization" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="innovationWorksheet">
           <Key>
@@ -2615,6 +2617,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <EntitySetMapping Name="Innovations">
             <EntityTypeMapping TypeName="Model.Innovation">
               <MappingFragment StoreEntitySet="Innovation">
+                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID_innovation" ColumnName="ID innovation" />
                 <ScalarProperty Name="ID_innovWorksheet" ColumnName="ID innovWorksheet" />

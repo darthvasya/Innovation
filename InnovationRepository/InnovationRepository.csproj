@@ -69,6 +69,12 @@
     <Compile Include="AddCompanyWindow.xaml.cs">
       <DependentUpon>AddCompanyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddContact.xaml.cs">
+      <DependentUpon>AddContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddInnovationWindow.xaml.cs">
+      <DependentUpon>AddInnovationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Address.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -219,6 +225,14 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Page Include="AddCompanyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddContact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddInnovationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

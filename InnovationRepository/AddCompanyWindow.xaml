@@ -7,12 +7,11 @@
         mc:Ignorable="d"
         Title="AddCompanyWindow" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox x:Name="townBox" HorizontalAlignment="Left" Height="30" Margin="806,137,0,0" TextWrapping="Wrap" Text="Минск" VerticalAlignment="Top" Width="258"/>
+        
         <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="30" Margin="213,66,0,0" TextWrapping="Wrap" Text="Чемпион и Компания" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelName" Content="Название:" HorizontalAlignment="Left" Margin="53,62,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
         <ComboBox x:Name="branchBox" HorizontalAlignment="Left" Margin="213,130,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
         <Label x:Name="labelBranch" Content="Branch:" HorizontalAlignment="Left" Margin="53,133,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <Label x:Name="labeTown" Content="Город:" HorizontalAlignment="Left" Margin="646,130,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
         <ComboBox x:Name="ownersheepBox" HorizontalAlignment="Left" Margin="213,189,0,0" VerticalAlignment="Top" Width="258" Height="37" SelectedIndex="0"  />
         <Label x:Name="labelOwnersheep" Content="Ownersheep: " HorizontalAlignment="Left" Margin="53,192,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
         <ComboBox x:Name="fieldhBox" HorizontalAlignment="Left" Margin="213,257,0,0" VerticalAlignment="Top" Width="258" Height="37" SelectedIndex="0"  />
@@ -40,6 +39,7 @@
         <Button x:Name="saveCompanyBtn" Content="Сохранить" HorizontalAlignment="Left" Margin="762,554,0,0" VerticalAlignment="Top" Width="160" Height="52" Click="saveCompanyBtn_Click"/>
         <ComboBox x:Name="stateBox" HorizontalAlignment="Left" Margin="213,362,0,0" VerticalAlignment="Top" Width="258" Height="37" SelectedIndex="1"  />
         <Label x:Name="labelState" Content="Company State:" HorizontalAlignment="Left" Margin="34,365,0,0" VerticalAlignment="Top" Width="135" Height="34" FontSize="18"/>
-
+        <TextBox x:Name="townBox" HorizontalAlignment="Left" Height="30" Margin="806,137,0,0" TextWrapping="Wrap" Text="Минск" VerticalAlignment="Top" Width="258"/>
+        <Label x:Name="labeTown" Content="Город:" HorizontalAlignment="Left" Margin="646,130,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
     </Grid>
 </Window>
