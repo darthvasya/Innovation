@@ -36,6 +36,9 @@ namespace InnovationRepository
                 authorBox.Items.Add("[" + author.ID_contact + "] " + author.name + " " + author.surname);
                 ownerBox.Items.Add("[" + author.ID_contact + "] " + author.name + " " + author.surname);
             }
+            var states = context.StatesInnovations.ToList();
+            foreach (var state in states)
+                stateBox.Items.Add(state.stateInnvoation);
         }
 
         private void addContactBtn_Click(object sender, RoutedEventArgs e)
@@ -160,6 +163,7 @@ namespace InnovationRepository
 
             context.Classifications.Add(myClassification);
             context.SaveChanges();
+          
 
             int addedClassification = context.Classifications.Take(10000).AsEnumerable().Last().ID_classification;
             Innovation myInnovation = new Innovation();
@@ -172,9 +176,13 @@ namespace InnovationRepository
             myInnovation.ID_contactAuthor = authorId;
             myInnovation.ID_contactOwner = ownerId;
 
+            int idState = context.StatesInnovations.Where(p => p.stateInnvoation == stateBox.Text.ToString()).FirstOrDefault().ID_stateInnov;
+            myInnovation.ID_stateInnov = idState;
+
             context.Innovations.Add(myInnovation);
             context.SaveChanges();
             MessageBox.Show("Инновационный продукт успешно добавлен");
+            this.Close();
         }
 
     }

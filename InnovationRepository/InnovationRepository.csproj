@@ -203,6 +203,9 @@
     <Compile Include="realizationInCompany_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="RealizationWindow.xaml.cs">
+      <DependentUpon>RealizationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sertification.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -261,6 +264,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MoreAboutInnovationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RealizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
