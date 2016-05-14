@@ -60,7 +60,7 @@
           <Key>
             <PropertyRef Name="ID classification" />
           </Key>
-          <Property Name="ID classification" Type="int" Nullable="false" />
+          <Property Name="ID classification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID prevelency" Type="int" Nullable="false" />
           <Property Name="ID placeProdCycle" Type="int" Nullable="false" />
           <Property Name="ID continuity" Type="int" Nullable="false" />
@@ -194,7 +194,6 @@
           <Property Name="ID sertificate" Type="int" />
           <Property Name="ID stateInnov" Type="int" />
           <Property Name="effeciency" Type="varchar" MaxLength="50" />
-          <Property Name="registrationDate" Type="datetime" StoreGeneratedPattern="Computed" Nullable="false" />
           <Property Name="lastUpdate" Type="datetime" />
           <Property Name="ID classification" Type="int" Nullable="false" />
           <Property Name="description" Type="text" />
@@ -1430,7 +1429,6 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <Property Name="ID_sertificate" Type="Int32" />
           <Property Name="ID_stateInnov" Type="Int32" />
           <Property Name="effeciency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="registrationDate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Computed" Precision="3" />
           <Property Name="lastUpdate" Type="DateTime" Precision="3" />
           <Property Name="ID_classification" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Classification" Relationship="Self.FK_Innovation_Classification" FromRole="Innovation" ToRole="Classification" />
@@ -2626,7 +2624,6 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
                 <ScalarProperty Name="ID_sertificate" ColumnName="ID sertificate" />
                 <ScalarProperty Name="ID_stateInnov" ColumnName="ID stateInnov" />
                 <ScalarProperty Name="effeciency" ColumnName="effeciency" />
-                <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
                 <ScalarProperty Name="lastUpdate" ColumnName="lastUpdate" />
                 <ScalarProperty Name="ID_classification" ColumnName="ID classification" />
               </MappingFragment>

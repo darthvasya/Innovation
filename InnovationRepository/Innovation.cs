@@ -28,7 +28,6 @@ namespace InnovationRepository
         public Nullable<int> ID_sertificate { get; set; }
         public Nullable<int> ID_stateInnov { get; set; }
         public string effeciency { get; set; }
-        public System.DateTime registrationDate { get; set; }
         public Nullable<System.DateTime> lastUpdate { get; set; }
         public int ID_classification { get; set; }
         public string description { get; set; }

@@ -39,7 +39,7 @@ namespace InnovationRepository
             Expr5.Text = "По степени новизны для рынка: " + innovationInfo.Expr5.ToString().ToUpper();
             Expr6.Text = "По ожидаемому охвату доли рынка: " + innovationInfo.Expr6.ToString().ToUpper();
             Expr7.Text = "По уровню воздействия на факторы производства: " + innovationInfo.Expr7.ToString().ToUpper();
-            Expr8.Text = "По уровню воздействия на факторы производства: " + innovationInfo.Expr8.ToString().ToUpper();
+            Expr8.Text = "По уровню воздействия на экономику: " + innovationInfo.Expr8.ToString().ToUpper();
             Expr9.Text = "По степени новизны и инновационному потенциалу: " + innovationInfo.Expr9.ToString().ToUpper();
             Expr10.Text = "По месту в производственном цикле: " + innovationInfo.Expr10.ToString().ToUpper();
             Expr11.Text = "По уровню воздействия на процесс производства: " + innovationInfo.Expr11.ToString().ToUpper();
