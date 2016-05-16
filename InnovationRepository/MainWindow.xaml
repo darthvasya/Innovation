@@ -69,6 +69,7 @@
         </Canvas>
         <Canvas Grid.ColumnSpan="3" Grid.Row="2" Background="#dfffff">
             <TextBlock Canvas.Left="60">Нижняя панель</TextBlock>
+            <Button Canvas.Left="54" Canvas.Top="53" Height="43" Width="161" FontSize="18" Click="Button_Click_2">Подробнее</Button>
         </Canvas>
     </Grid>
 

@@ -19,9 +19,25 @@ namespace InnovationRepository
     /// </summary>
     public partial class RealizationWindow : Window
     {
+        Entities context = new Entities();
+
         public RealizationWindow()
         {
             InitializeComponent();
+        }
+
+        void LoadInfo()
+        {
+            var promouters = context.contacts.ToList();
+            var companys = context.Companies.ToList();
+            var innovations = context.Innovations.ToList();
+
+            foreach (var promouter in promouters)
+                promoterBox.Items.Add("[" + promouter.ID_contact + "] " + promouter.name + " " + promouter.surname);
+            foreach (var company in companys)
+                companyBox.Items.Add(company.name);
+
+
         }
     }
 }

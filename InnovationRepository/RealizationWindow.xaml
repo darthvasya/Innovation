@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InnovationRepository"
         mc:Ignorable="d"
-        Title="RealizationWindow" Height="300" Width="300">
+        Title="RealizationWindow" Height="480" Width="724" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="companyBox" HorizontalAlignment="Left" Margin="35,56,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
+        <ComboBox x:Name="innovaBox" HorizontalAlignment="Left" Margin="400,56,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
+        <ComboBox x:Name="stateBox" HorizontalAlignment="Left" Margin="35,181,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
+        <ComboBox x:Name="promoterBox" HorizontalAlignment="Left" Margin="400,181,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"  />
     </Grid>
 </Window>
