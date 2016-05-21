@@ -24,6 +24,7 @@ namespace InnovationRepository
         public RealizationWindow()
         {
             InitializeComponent();
+            LoadInfo();
         }
 
         void LoadInfo()
@@ -31,12 +32,16 @@ namespace InnovationRepository
             var promouters = context.contacts.ToList();
             var companys = context.Companies.ToList();
             var innovations = context.Innovations.ToList();
+            var states = context.StatesInnovations.ToList();
 
             foreach (var promouter in promouters)
                 promoterBox.Items.Add("[" + promouter.ID_contact + "] " + promouter.name + " " + promouter.surname);
             foreach (var company in companys)
                 companyBox.Items.Add(company.name);
-
+            foreach (var innov in innovations)
+                innovaBox.Items.Add(innov.Name);
+            foreach (var state in states)
+                stateBox.Items.Add(state.stateInnvoation);
 
         }
     }

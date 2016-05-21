@@ -78,7 +78,7 @@
           <Key>
             <PropertyRef Name="ID company" />
           </Key>
-          <Property Name="name" Type="ntext" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="ID adress" Type="int" Nullable="false" />
           <Property Name="ID contact" Type="int" Nullable="false" />
           <Property Name="ID company" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
@@ -1289,7 +1289,7 @@ warning 6002: The table/view '14IT-1-Makarchuk.dbo.InformationAboutRealization' 
           <Key>
             <PropertyRef Name="ID_company" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ID_adress" Type="Int32" Nullable="false" />
           <Property Name="ID_contact" Type="Int32" Nullable="false" />
           <Property Name="ID_company" Type="Int32" Nullable="false" />
