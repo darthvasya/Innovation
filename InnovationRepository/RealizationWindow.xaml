@@ -10,9 +10,14 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="companyBox" HorizontalAlignment="Left" Margin="35,56,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
-        <ComboBox x:Name="innovaBox" HorizontalAlignment="Left" Margin="400,56,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
-        <ComboBox x:Name="stateBox" HorizontalAlignment="Left" Margin="35,181,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
-        <ComboBox x:Name="promoterBox" HorizontalAlignment="Left" Margin="400,181,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"  />
+        <ComboBox x:Name="companyBox" HorizontalAlignment="Left" Margin="370,46,0,0" VerticalAlignment="Top" Width="258" Height="36"   SelectedIndex="0" FontSize="18"/>
+        <ComboBox x:Name="innovaBox" HorizontalAlignment="Left" Margin="370,132,0,0" VerticalAlignment="Top" Width="258" Height="38"   SelectedIndex="0" FontSize="18"/>
+        <ComboBox x:Name="promoterBox" HorizontalAlignment="Left" Margin="370,205,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0" FontSize="18"  />
+        <Button x:Name="addRealizBtn" Content="Добавить реализацию" HorizontalAlignment="Left" Margin="327,330,0,0" VerticalAlignment="Top" Width="160" Height="52" Click="addRealizBtn_Click"/>
+        <TextBox x:Name="stateBox" HorizontalAlignment="Left" Height="32" Margin="370,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" FontSize="18"/>
+        <Label x:Name="label" Content="Компания:" HorizontalAlignment="Left" Margin="159,46,0,0" VerticalAlignment="Top" FontSize="21"/>
+        <Label x:Name="label_Copy" Content="Инновационный продукт:" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" FontSize="21"/>
+        <Label x:Name="label_Copy1" Content="Промоутер:" HorizontalAlignment="Left" Margin="147,204,0,0" VerticalAlignment="Top" FontSize="21"/>
+        <Label x:Name="label_Copy2" Content="Стутс реализации:" HorizontalAlignment="Left" Margin="85,264,0,0" VerticalAlignment="Top" FontSize="21"/>
     </Grid>
 </Window>

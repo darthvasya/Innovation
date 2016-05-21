@@ -159,7 +159,7 @@ namespace InnovationRepository
             string x1 = ownerBox.Text.ToString();
             string[] s1 = x1.Split(']');
             s1[0] = s1[0].Replace('[', '0');
-            int ownerId = Convert.ToInt32(s[0]);
+            int ownerId = Convert.ToInt32(s1[0]);
 
             context.Classifications.Add(myClassification);
             context.SaveChanges();

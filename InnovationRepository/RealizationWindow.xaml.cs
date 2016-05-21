@@ -25,6 +25,7 @@ namespace InnovationRepository
         {
             InitializeComponent();
             LoadInfo();
+            clearBox();
         }
 
         void LoadInfo()
@@ -40,9 +41,41 @@ namespace InnovationRepository
                 companyBox.Items.Add(company.name);
             foreach (var innov in innovations)
                 innovaBox.Items.Add(innov.Name);
-            foreach (var state in states)
-                stateBox.Items.Add(state.stateInnvoation);
+     
 
+        }
+
+        private void addRealizBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int idSelectedCompany = context.Companies.Where(p => p.name == companyBox.Text.ToString()).FirstOrDefault().ID_company;
+            int idSelectedInnovation = context.Innovations.Where(p => p.Name == innovaBox.Text.ToString()).FirstOrDefault().ID_innovation;
+
+            string x1 = promoterBox.Text.ToString();
+            string[] s1 = x1.Split(']');
+            s1[0] = s1[0].Replace('[', '0');
+            int promoterId = Convert.ToInt32(s1[0]);
+
+            realization myRealization = new realization();
+            myRealization.ID_company = idSelectedCompany;
+            myRealization.ID_innovation = idSelectedInnovation;
+            myRealization.ID_promoter = promoterId;
+            myRealization.implementationState = stateBox.Text.ToString();
+
+            try
+            {
+                context.realizations.Add(myRealization);
+                context.SaveChanges();
+                MessageBox.Show("Элемент успешно добавлен");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void clearBox()
+        {
+            stateBox.Text = "";
         }
     }
 }
