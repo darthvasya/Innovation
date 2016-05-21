@@ -76,6 +76,14 @@ namespace InnovationRepository
         private void clearBox()
         {
             stateBox.Text = "";
+            innovaBox.SelectedIndex = 0;
+            companyBox.SelectedIndex = 0;
+            promoterBox.SelectedIndex = 0;
+        }
+
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            clearBox();
         }
     }
 }
