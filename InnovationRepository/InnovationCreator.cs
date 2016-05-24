@@ -5,12 +5,7 @@ using System.Text;
 
 namespace InnovationRepository
 {
-    public interface IObject
+    public class InnovationCreator : MyInnovation
     {
-
-        void getInformation();
-        void addNewItem();
-        string getError(Exception ex);
-        
     }
 }

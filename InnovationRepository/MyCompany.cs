@@ -7,11 +7,13 @@ using System.Collections.ObjectModel;
 
 namespace InnovationRepository
 {
-    public class MyCompany : IObject
+    public class MyCompany : Father, IObject
     {
         Entities context;
-        public static int selectedCompany {get; set;}
+        public static int selectedCompany { get; set; }
         public static int selectedInnovation { get; set; }
+        public string errMessage { get; private set; }
+
 
         public MyCompany()
         {
@@ -25,35 +27,24 @@ namespace InnovationRepository
             }
         }
 
-        public string errMessage{
-           get { return "Error in MyCompany class"; }
+        public virtual void getInformation()
+        {
+            //some actions
+            throw new NotImplementedException();
         }
-
- 
 
         public virtual void addNewItem()
         {
-            MessageBox.Show("New item aded");
+            //some actions
+            MessageBox.Show("Объект успешно добавлен");
+            throw new NotImplementedException();
         }
 
-        public virtual void Edit()
+        public virtual string getError(Exception ex)
         {
-            MessageBox.Show("Edit");
+            if (ex.GetType().ToString() == "System.Data.Entity.Core.EntityException")
+                return "Ошибка соединения. Проверьте сеть.";
+            return "Неопознанная обшибка.";
         }
-
-        public virtual void getInformation()
-        {
-            MessageBox.Show("getInformation");
-        }
-
-        public InformationAboutCompany getCompany(int idCompany)
-        {  
-            return context.InformationAboutCompanies.Find(idCompany); ;
-        }
-
-        //public ObservableCollection<Company> getAllCompanies()
-        //{
-        //    return context.Companies;
-        //}
     }
 }

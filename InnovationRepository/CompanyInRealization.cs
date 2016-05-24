@@ -11,25 +11,23 @@ namespace InnovationRepository
         private Innovation InnovObject;
         private Company CompanyObject;
 
-        public CompanyInRealization()
+        public CompanyInRealization(string Name)
         {
 
-        }
-
-        public override void Edit()
-        {
-            base.Edit(); 
-        }
-
-        public override void addNewItem()
-        {
-            base.addNewItem();
         }
 
         public override void getInformation()
         {
             base.getInformation();
         }
+
+        public override void addNewItem()
+        {
+            base.addNewItem();
+            MessageBox.Show("And some actions from polymorfism");
+        }
+
+
 
 
 

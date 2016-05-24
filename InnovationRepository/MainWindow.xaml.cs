@@ -31,6 +31,7 @@ namespace InnovationRepository
 
         private void LoadTestEntity()
         {
+            MyCompany company = new MyCompany();
             try
             {
                 //происходит выборка первых, нужно сделать последних, 
@@ -72,7 +73,7 @@ namespace InnovationRepository
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                MessageBox.Show(company.getError(ex) + " Проверьте соединение. Приложение будет закрыто.", "Ошибка " + ex.GetType().ToString(),
                                 MessageBoxButton.OK, MessageBoxImage.Error);
                 Application.Current.Shutdown();
             }

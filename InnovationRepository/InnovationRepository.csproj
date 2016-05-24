@@ -125,6 +125,7 @@
     <Compile Include="expMarShare.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Father.cs" />
     <Compile Include="FieldActivity.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -158,6 +159,8 @@
     <Compile Include="InnovationAfterDate_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="InnovationCreator.cs" />
+    <Compile Include="InnovationRealization.cs" />
     <Compile Include="InnovationWindow.xaml.cs">
       <DependentUpon>InnovationWindow.xaml</DependentUpon>
     </Compile>
@@ -183,6 +186,7 @@
       <DependentUpon>MoreAboutInnovationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyCompany.cs" />
+    <Compile Include="MyInnovation.cs" />
     <Compile Include="Ownersheep.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
