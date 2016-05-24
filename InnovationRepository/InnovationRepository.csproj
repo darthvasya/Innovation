@@ -99,6 +99,7 @@
     <Compile Include="Company.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="CompanyCreator.cs" />
     <Compile Include="CompanyInRealization.cs" />
     <Compile Include="CompanyState.cs">
       <DependentUpon>Model.tt</DependentUpon>

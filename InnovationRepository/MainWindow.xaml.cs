@@ -59,6 +59,16 @@ namespace InnovationRepository
                 localCount.Content = countLocal.ToString();
                 systCount.Content = countSys.ToString();
 
+                int countRealiz = context.realizations.Where(p => p.implementationState == "инновационный").Count();
+                realiz.Content = "В реализации находится: " + countRealiz + " инновационных продуктов";
+
+                int countInvest = context.realizations.Where(p => p.implementationState == "инновационный").Count();
+                invest.Content = "В инвестиционной стадии находится: " + countInvest + " инновационных продуктов";
+
+
+                int countPInvest = context.realizations.Where(p => p.implementationState == "инновационный").Count();
+                invest.Content = "В прединвестиционной стадии находится: " + countPInvest + " инновационных продуктов";
+
             }
             catch(Exception ex)
             {

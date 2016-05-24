@@ -20,7 +20,7 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Grid.Row="0">
-                    <Image Height="355" Source="Resources/no2.png"  VerticalAlignment="Top" Margin="0,10,10,0" HorizontalAlignment="Center" Width="390" />
+                    <Image Height="355" Source="Resources/earth.jpg"  VerticalAlignment="Top" Margin="0,10,10,0" HorizontalAlignment="Center" Width="390" />
                 </StackPanel>
                 <StackPanel Grid.Column="1" Grid.Row="0">
                     <TextBlock x:Name="nameCompany" FontSize="42" Text="Название компании" HorizontalAlignment="Center" />
