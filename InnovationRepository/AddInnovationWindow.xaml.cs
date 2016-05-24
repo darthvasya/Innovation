@@ -30,15 +30,25 @@ namespace InnovationRepository
 
         void LoadInfo()
         {
-            var authors = context.contacts.ToList();
-            foreach (var author in authors)
+            try
             {
-                authorBox.Items.Add("[" + author.ID_contact + "] " + author.name + " " + author.surname);
-                ownerBox.Items.Add("[" + author.ID_contact + "] " + author.name + " " + author.surname);
+                var authors = context.contacts.ToList();
+                foreach (var author in authors)
+                {
+                    authorBox.Items.Add("[" + author.ID_contact + "] " + author.name + " " + author.surname);
+                    ownerBox.Items.Add("[" + author.ID_contact + "] " + author.name + " " + author.surname);
+                }
+                var states = context.StatesInnovations.ToList();
+                foreach (var state in states)
+                    stateBox.Items.Add(state.stateInnvoation);
             }
-            var states = context.StatesInnovations.ToList();
-            foreach (var state in states)
-                stateBox.Items.Add(state.stateInnvoation);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
+
         }
 
         private void addContactBtn_Click(object sender, RoutedEventArgs e)

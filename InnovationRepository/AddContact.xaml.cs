@@ -29,10 +29,20 @@ namespace InnovationRepository
 
         void LoadInfo()
         {
-            List<district> districts = context.districts.ToList();
+            try
+            {
+                List<district> districts = context.districts.ToList();
 
-            foreach (var district in districts)
-                districtBox.Items.Add(district.district1.ToString());
+                foreach (var district in districts)
+                    districtBox.Items.Add(district.district1.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
+
         }
 
         private void saveContactBtn_Click(object sender, RoutedEventArgs e)

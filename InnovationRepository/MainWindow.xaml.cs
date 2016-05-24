@@ -21,6 +21,8 @@ namespace InnovationRepository
     /// </summary>
     public partial class MainWindow : Window
     {
+        Entities context = new Entities();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,8 +33,6 @@ namespace InnovationRepository
         {
             try
             {
-                Entities context = new Entities();
-
                 //происходит выборка первых, нужно сделать последних, 
                 //мб ид в представление засунуть и по нему сортировать
                 List<InformationAboutCompany> comp = (from p in context.InformationAboutCompanies select p).Take(3).ToList();
@@ -62,7 +62,9 @@ namespace InnovationRepository
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
             }
         }
 

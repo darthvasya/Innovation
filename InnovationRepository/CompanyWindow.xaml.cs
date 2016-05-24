@@ -28,22 +28,31 @@ namespace InnovationRepository
 
         void LoadCompanyInformation()
         {
-            var company = context.InformationAboutCompanies.Where(p=> p.ID_company == MyCompany.selectedCompany).First();
-            if (company != null)
+            try
             {
-                nameCompany.Text = company.name.ToString();
-                branch.Text = company.branch.ToString();
-                district.Text = "Область: " + company.district.ToString();
-                town.Text = "Город: " + company.town.ToString();
-                street.Text = "Улица: " + company.street.ToString();
-                house.Text = "Дом: " + company.house.ToString();
-                flat.Text = "Квартира/Блок: " + company.flat.ToString();
-                ware.Text = company.ware.ToString();
-                name.Text = company.uname.ToString() + " " + company.secondName + " " + company.surname.ToString();
-                email.Text = "Email: " + company.email;
-                telephone.Text = "Telephone: " + company.telephone;
+                var company = context.InformationAboutCompanies.Where(p => p.ID_company == MyCompany.selectedCompany).First();
+                if (company != null)
+                {
+                    nameCompany.Text = company.name.ToString();
+                    branch.Text = company.branch.ToString();
+                    district.Text = "Область: " + company.district.ToString();
+                    town.Text = "Город: " + company.town.ToString();
+                    street.Text = "Улица: " + company.street.ToString();
+                    house.Text = "Дом: " + company.house.ToString();
+                    flat.Text = "Квартира/Блок: " + company.flat.ToString();
+                    ware.Text = company.ware.ToString();
+                    name.Text = company.uname.ToString() + " " + company.secondName + " " + company.surname.ToString();
+                    email.Text = "Email: " + company.email;
+                    telephone.Text = "Telephone: " + company.telephone;
+                }
+                //MessageBox.Show(MyCompany.selectedCompany.ToString());
             }
-            //MessageBox.Show(MyCompany.selectedCompany.ToString());
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
         }
     }
 }

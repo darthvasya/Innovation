@@ -47,8 +47,7 @@ namespace InnovationRepository
         }
 
         public InformationAboutCompany getCompany(int idCompany)
-        {
-           
+        {  
             return context.InformationAboutCompanies.Find(idCompany); ;
         }
 

@@ -34,14 +34,24 @@ namespace InnovationRepository
 
         void LoadList()
         {
-            Companys = new ObservableCollection<InformationAboutCompany>();
-            Entities context = new Entities();
-            var x = from p in context.InformationAboutCompanies select p;
-            foreach (var p in x)
+            try
             {
-                Companys.Add(p);
+                Companys = new ObservableCollection<InformationAboutCompany>();
+                Entities context = new Entities();
+                var x = from p in context.InformationAboutCompanies select p;
+                foreach (var p in x)
+                {
+                    Companys.Add(p);
+                }
+                myList.ItemsSource = Companys;
             }
-            myList.ItemsSource = Companys;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
+
             
         }
 

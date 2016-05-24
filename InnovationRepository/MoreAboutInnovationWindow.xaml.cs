@@ -29,14 +29,24 @@ namespace InnovationRepository
         public ObservableCollection<InformationAboutInnovation> Innovations { get; set; }
         void LoadList()
         {
-            Innovations = new ObservableCollection<InformationAboutInnovation>();
-            Entities context = new Entities();
-            var x = from p in context.InformationAboutInnovations select p;
-            foreach (var p in x)
+            try
             {
-                Innovations.Add(p);
+                Innovations = new ObservableCollection<InformationAboutInnovation>();
+                Entities context = new Entities();
+                var x = from p in context.InformationAboutInnovations select p;
+                foreach (var p in x)
+                {
+                    Innovations.Add(p);
+                }
+                myListInnovations.ItemsSource = Innovations;
             }
-            myListInnovations.ItemsSource = Innovations;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
+
         }
 
         private void myListInnovations_SelectionChanged(object sender, SelectionChangedEventArgs e)

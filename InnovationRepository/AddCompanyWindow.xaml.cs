@@ -37,29 +37,46 @@ namespace InnovationRepository
             //{
             //    townBox.Items.Add(town.town1.ToString());
             //}
+            try
+            {
+                List<Branch> branches = context.Branches.ToList();
+                List<Ownersheep> ownersheeps = context.Ownersheep.ToList();
+                List<FieldActivity> fieldActivity = context.FieldActivities.ToList();
+                List<district> districts = context.districts.ToList();
+                List<CompanyState> companyStates = context.CompanyStates.ToList();
 
-            List<Branch> branches = context.Branches.ToList();
-            List<Ownersheep> ownersheeps = context.Ownersheep.ToList();
-            List<FieldActivity> fieldActivity = context.FieldActivities.ToList();
-            List<district> districts = context.districts.ToList();
-            List<CompanyState> companyStates = context.CompanyStates.ToList();
-
-            foreach (var branch in branches)
-                branchBox.Items.Add(branch.branch1.ToString());
-            foreach (var ownersheep in ownersheeps)
-                ownersheepBox.Items.Add(ownersheep.ownersheep1.ToString());
-            foreach (var fieldActiv in fieldActivity)
-                fieldhBox.Items.Add(fieldActiv.fieldActivity1.ToString());
-            foreach (var district in districts)
-                districtBox.Items.Add(district.district1.ToString());
-            foreach (var state in companyStates)
-                stateBox.Items.Add(state.companyState1);
-
+                foreach (var branch in branches)
+                    branchBox.Items.Add(branch.branch1.ToString());
+                foreach (var ownersheep in ownersheeps)
+                    ownersheepBox.Items.Add(ownersheep.ownersheep1.ToString());
+                foreach (var fieldActiv in fieldActivity)
+                    fieldhBox.Items.Add(fieldActiv.fieldActivity1.ToString());
+                foreach (var district in districts)
+                    districtBox.Items.Add(district.district1.ToString());
+                foreach (var state in companyStates)
+                    stateBox.Items.Add(state.companyState1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
         }
 
         private void saveCompanyBtn_Click(object sender, RoutedEventArgs e)
         {
-            addItems();
+            try
+            {
+                addItems();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
+            
         }
 
         void addItems()

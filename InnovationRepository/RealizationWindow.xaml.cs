@@ -30,19 +30,26 @@ namespace InnovationRepository
 
         void LoadInfo()
         {
-            var promouters = context.contacts.ToList();
-            var companys = context.Companies.ToList();
-            var innovations = context.Innovations.ToList();
-            var states = context.StatesInnovations.ToList();
+            try
+            {
+                var promouters = context.contacts.ToList();
+                var companys = context.Companies.ToList();
+                var innovations = context.Innovations.ToList();
+                var states = context.StatesInnovations.ToList();
 
-            foreach (var promouter in promouters)
-                promoterBox.Items.Add("[" + promouter.ID_contact + "] " + promouter.name + " " + promouter.surname);
-            foreach (var company in companys)
-                companyBox.Items.Add(company.name);
-            foreach (var innov in innovations)
-                innovaBox.Items.Add(innov.Name);
-     
-
+                foreach (var promouter in promouters)
+                    promoterBox.Items.Add("[" + promouter.ID_contact + "] " + promouter.name + " " + promouter.surname);
+                foreach (var company in companys)
+                    companyBox.Items.Add(company.name);
+                foreach (var innov in innovations)
+                    innovaBox.Items.Add(innov.Name);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Скорее всего нет соединения с базой данных. Проверьте соединение. Приложение будет закрыто.", "Ошибка",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
         }
 
         private void addRealizBtn_Click(object sender, RoutedEventArgs e)
