@@ -71,7 +71,7 @@ namespace InnovationRepository
             //end work with town
 
             //work with district
-            if (districtBox.Text != null)
+            if (districtBox.Text != "")
             {
                 int selectedDistrictIndex = context.districts.Where(p => p.district1 == districtBox.Text.ToString()).FirstOrDefault().ID_district;
                 myAdress.ID_district = selectedDistrictIndex;
@@ -82,7 +82,7 @@ namespace InnovationRepository
             //end work with district
 
             //work with street, house, flat
-            if (streetBox.Text != null)
+            if (streetBox.Text != "")
             {
                 myAdress.street = streetBox.Text.ToString();
             }
@@ -117,15 +117,15 @@ namespace InnovationRepository
             contact myContact = new contact();
             myContact.ID_PersonStatus = 1;
 
-            if (unameBox.Text != null)
+            if (unameBox.Text != "")
                 myContact.name = unameBox.Text.ToString();
-            if (surnameBox.Text != null)
+            if (surnameBox.Text != "")
                 myContact.surname = surnameBox.Text.ToString();
-            if (secondnameBox.Text != null)
+            if (secondnameBox.Text != "")
                 myContact.secondName = secondnameBox.Text.ToString();
-            if (telephoneBox.Text != null)
+            if (telephoneBox.Text != "")
                 myContact.telephone = telephoneBox.Text.ToString();
-            if (emailBox.Text != null)
+            if (emailBox.Text != "")
                 myContact.email = emailBox.Text.ToString();
             
 
@@ -138,7 +138,7 @@ namespace InnovationRepository
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Произошла ошибка добавления. Проверьте правильность введенных данных. \n " + ex.Message.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             //end work with contact
         }

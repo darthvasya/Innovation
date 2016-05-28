@@ -161,6 +161,7 @@ namespace InnovationRepository
 
         private void addInnovationBtn_Click(object sender, RoutedEventArgs e)
         {
+            bool add = true;
             string x = authorBox.Text.ToString();
             string[] s = x.Split(']');
             s[0] = s[0].Replace('[', '0');
@@ -177,22 +178,36 @@ namespace InnovationRepository
 
             int addedClassification = context.Classifications.Take(10000).AsEnumerable().Last().ID_classification;
             Innovation myInnovation = new Innovation();
-            myInnovation.Name = nameBox.Text.ToString();
+            if (nameBox.Text.ToString() != "")
+                myInnovation.Name = nameBox.Text.ToString();
+            else
+                add = false;
             myInnovation.ID_innovWorksheet = 1;
             myInnovation.ID_classification = addedClassification;
 
             TextRange range = new TextRange(descriptionBox.Document.ContentStart, descriptionBox.Document.ContentEnd);
-            myInnovation.description = range.Text;
+            if (range.Text == "")
+                myInnovation.description = range.Text;
+            else
+                add = false;
             myInnovation.ID_contactAuthor = authorId;
             myInnovation.ID_contactOwner = ownerId;
 
             int idState = context.StatesInnovations.Where(p => p.stateInnvoation == stateBox.Text.ToString()).FirstOrDefault().ID_stateInnov;
             myInnovation.ID_stateInnov = idState;
 
-            context.Innovations.Add(myInnovation);
-            context.SaveChanges();
-            MessageBox.Show("Инновационный продукт успешно добавлен");
-            this.Close();
+            if (add)
+            {
+                context.Innovations.Add(myInnovation);
+                context.SaveChanges();
+                MessageBox.Show("Инновационный продукт успешно добавлен");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Вы не заполнили все обязательные поля", "Ошибка добавления", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
         }
 
     }

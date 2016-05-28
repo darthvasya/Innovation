@@ -60,20 +60,20 @@ namespace InnovationRepository
                 localCount.Content = countLocal.ToString();
                 systCount.Content = countSys.ToString();
 
-                int countRealiz = context.realizations.Where(p => p.implementationState == "инновационный").Count();
-                realiz.Content = "В реализации находится: " + countRealiz + " инновационных продуктов";
+                int countRealiz = context.realizations.Count();
+                realiz.Content = "В реализации находится: " + countRealiz;
 
-                int countInvest = context.realizations.Where(p => p.implementationState == "инновационный").Count();
-                invest.Content = "В инвестиционной стадии находится: " + countInvest + " инновационных продуктов";
+                int countInvest = context.realizations.Where(p => p.implementationState == "Тестирование").Count();
+                invest.Content = "На тестировании: " + countInvest;
 
 
-                int countPInvest = context.realizations.Where(p => p.implementationState == "инновационный").Count();
-                invest.Content = "В прединвестиционной стадии находится: " + countPInvest + " инновационных продуктов";
+                int countPInvest = context.realizations.Where(p => p.implementationState == "Внедрение").Count();
+                predinvest.Content = "На внедрении: " + countPInvest;
 
             }
             catch(Exception ex)
             {
-                MessageBox.Show(company.getError(ex) + " Проверьте соединение. Приложение будет закрыто.", "Ошибка " + ex.GetType().ToString(),
+                MessageBox.Show(company.getError(ex) + " Проверьте соединение. Приложение будет закрыто." + ex.Message, "Ошибка " + ex.GetType().ToString(),
                                 MessageBoxButton.OK, MessageBoxImage.Error);
                 Application.Current.Shutdown();
             }

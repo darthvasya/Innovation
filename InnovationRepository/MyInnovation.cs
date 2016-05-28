@@ -17,7 +17,7 @@ namespace InnovationRepository
         }
         
 
-        public void addNewItem()
+        public virtual void addNewItem()
         {
             throw new NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace InnovationRepository
             throw new NotImplementedException();
         }
 
-        public void getInformation()
+        public virtual  void getInformation()
         {
             throw new NotImplementedException();
         }

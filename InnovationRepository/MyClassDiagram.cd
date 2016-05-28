@@ -40,14 +40,14 @@
   <Class Name="InnovationRepository.InnovationCreator">
     <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAABAAAACA=</HashCode>
       <FileName>InnovationCreator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InnovationRepository.InnovationRealization">
     <Position X="11.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAABCAAABAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>InnovationRealization.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -34,7 +34,7 @@
             </StackPanel>
             <Label x:Name="label" Content="Название предприятия" Canvas.Left="26" Canvas.Top="114" RenderTransformOrigin="0.237,-0.154" Width="189" FontSize="16"/>
             <Label x:Name="label_Copy" Content="Отрасль" Canvas.Left="263" Canvas.Top="114" RenderTransformOrigin="0.237,-0.154" Width="103" FontSize="16"/>
-            <Label x:Name="label_Copy1" Content="Производимые продукты" Canvas.Left="403" Canvas.Top="106" RenderTransformOrigin="0.237,-0.154" Width="203" FontSize="16" Height="39"/>
+            <Label x:Name="label_Copy1" Content="Производимые продукты" Canvas.Left="403" Canvas.Top="114" RenderTransformOrigin="0.237,-0.154" Width="203" FontSize="16" Height="39"/>
             <StackPanel Height="51" Canvas.Left="10" Canvas.Top="206" Width="586" Background="#FFDEDBDB" >
                 <TextBlock x:Name="nameCompSecond" TextWrapping="Wrap" Text="Очень длинное название предприятия" FontSize="14" Margin="10,5,371,0" Height="40" Background="#FF4E8FEC" TextAlignment="Center" VerticalAlignment="Center"/>
                 <TextBlock x:Name="branchCompSecond" TextWrapping="Wrap" Text="Сельское хозяйство" FontSize="14" Margin="232,-40,196,0" Height="40" Background="#FF9B9B9B" TextAlignment="Center" VerticalAlignment="Center"/>
@@ -67,14 +67,14 @@
             <Label x:Name="systCount" FontSize="24" Canvas.Top="258" Canvas.Left="237">n</Label>
         </Canvas>
         <Canvas Grid.ColumnSpan="3" Grid.Row="2">
-            <Button Canvas.Left="463" Canvas.Top="35" Height="43" Width="306" FontSize="18" Click="Button_Click_2">Информация о реализации</Button>
+            <Button Canvas.Left="463" Canvas.Top="35" Height="43" Width="306" FontSize="18" Click="Button_Click_2">Реализация</Button>
             <Label x:Name="realiz" FontSize="24" Canvas.Top="124" Canvas.Left="381">Реализцуемых проектов:</Label>
             <Label x:Name="invest" FontSize="24" Canvas.Top="184" Canvas.Left="381">Реализцуемых проектов:</Label>
             <Label x:Name="predinvest" FontSize="24" Canvas.Top="246" Canvas.Left="381">Реализцуемых проектов:</Label>
             <Image x:Name="image" Height="248" Canvas.Left="32" Canvas.Top="35" Width="260" Source="Resources/first.jpg"/>
             <Image x:Name="image1" Height="248" Canvas.Left="868" Canvas.Top="35" Width="338" Source="Resources/fourth.jpg"/>
         </Canvas>
-        <Menu Height="28" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="1224" FontSize="16" Grid.ColumnSpan="3" Margin="0,0,-8,0">
+        <Menu Height="28" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="1366" FontSize="16" Grid.ColumnSpan="3" Margin="0,0,-8,0">
             <MenuItem Header="Файл">
                 <MenuItem Header="Undo"/>
                 <MenuItem Header="Выйти"/>

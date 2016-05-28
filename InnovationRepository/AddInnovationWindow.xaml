@@ -8,14 +8,14 @@
         Title="AddInnovationWindow" Height="680" Width="1224" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label  x:Name="nameLabel" Content="Название:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="30" Margin="109,54,0,0" TextWrapping="Wrap" Text="Названиеинновации" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="30" Margin="109,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label  x:Name="stateLabel" Content="Статус:" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
         <ComboBox x:Name="stateBox" HorizontalAlignment="Left" Margin="109,106,0,0" VerticalAlignment="Top" Width="258" Height="37"   SelectedIndex="0"/>
         <Label  x:Name="descriptionLabel" Content="Описание: " HorizontalAlignment="Left" Margin="372,50,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
         <RichTextBox x:Name="descriptionBox" HorizontalAlignment="Left" Height="92" Margin="488,54,0,0" VerticalAlignment="Top" Width="258">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="RichTextBox"/>
+                    <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>

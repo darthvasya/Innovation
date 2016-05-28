@@ -334,6 +334,11 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\earth.jpg" />
+    <Resource Include="Resources\first.jpg" />
+    <Resource Include="Resources\fivth.jpg" />
+    <Resource Include="Resources\fourth.jpg" />
+    <Resource Include="Resources\second.jpg" />
     <Resource Include="Resources\no2.png" />
   </ItemGroup>
   <ItemGroup>

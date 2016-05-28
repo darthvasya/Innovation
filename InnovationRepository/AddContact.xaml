@@ -9,23 +9,23 @@
     <Grid>
         <ComboBox x:Name="districtBox" HorizontalAlignment="Left" Margin="806,62,0,0" VerticalAlignment="Top" Width="264" Height="36" SelectedIndex="0" />
         <Label x:Name="labelDistrict" Content="Область:" HorizontalAlignment="Left" Margin="646,62,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="streetBox" HorizontalAlignment="Left" Height="30" Margin="806,206,0,0" TextWrapping="Wrap" Text="Победы" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="streetBox" HorizontalAlignment="Left" Height="30" Margin="806,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelStreet" Content="Улица:" HorizontalAlignment="Left" Margin="646,202,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="houseBox" HorizontalAlignment="Left" Height="30" Margin="806,261,0,0" TextWrapping="Wrap" Text="17" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="houseBox" HorizontalAlignment="Left" Height="30" Margin="806,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelHouse" Content="Дом:" HorizontalAlignment="Left" Margin="646,257,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="flatBox" HorizontalAlignment="Left" Height="30" Margin="806,325,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="flatBox" HorizontalAlignment="Left" Height="30" Margin="806,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelFlat" Content="Квартира/блок:" HorizontalAlignment="Left" Margin="618,321,0,0" VerticalAlignment="Top" Width="144" Height="34" FontSize="18"/>
-        <TextBox x:Name="unameBox" HorizontalAlignment="Left" Height="30" Margin="212,68,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="unameBox" HorizontalAlignment="Left" Height="30" Margin="212,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelUname" Content="Имя:" HorizontalAlignment="Left" Margin="52,64,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="secondnameBox" HorizontalAlignment="Left" Height="30" Margin="212,125,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="secondnameBox" HorizontalAlignment="Left" Height="30" Margin="212,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelSecondname" Content="Отчество:" HorizontalAlignment="Left" Margin="52,121,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="surnameBox" HorizontalAlignment="Left" Height="30" Margin="212,184,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="surnameBox" HorizontalAlignment="Left" Height="30" Margin="212,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelSurname" Content="Фамилия:" HorizontalAlignment="Left" Margin="52,180,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="telephoneBox" HorizontalAlignment="Left" Height="30" Margin="212,258,0,0" TextWrapping="Wrap" Text="+375298061823" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="telephoneBox" HorizontalAlignment="Left" Height="30" Margin="212,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelTelephone" Content="Телефон&#x9;:" HorizontalAlignment="Left" Margin="52,254,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="30" Margin="212,319,0,0" TextWrapping="Wrap" Text="myemail@mail.com" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="30" Margin="212,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labelEmail" Content="Email:" HorizontalAlignment="Left" Margin="52,315,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
-        <TextBox x:Name="townBox" HorizontalAlignment="Left" Height="30" Margin="806,137,0,0" TextWrapping="Wrap" Text="Минск" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="townBox" HorizontalAlignment="Left" Height="30" Margin="806,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
         <Label x:Name="labeTown" Content="Город:" HorizontalAlignment="Left" Margin="646,130,0,0" VerticalAlignment="Top" Width="116" Height="34" FontSize="18"/>
         <Button x:Name="saveContactBtn" Content="Сохранить" HorizontalAlignment="Left" Margin="762,554,0,0" VerticalAlignment="Top" Width="160" Height="52" Click="saveContactBtn_Click"/>
     </Grid>
